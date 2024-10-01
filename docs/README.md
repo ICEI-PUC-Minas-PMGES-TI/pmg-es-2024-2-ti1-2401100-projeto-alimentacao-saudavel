@@ -11,32 +11,39 @@ A justificativa para a realização deste projeto sobre alimentação saudável 
 Este projeto tem como foco três grupos principais:
 
 Pessoas que buscam alimentação saudável: São indivíduos que já têm interesse em melhorar seus hábitos alimentares, mas muitas vezes encontram dificuldades devido ao excesso de informações contraditórias, falta de tempo ou desconhecimento sobre como planejar uma dieta equilibrada no dia a dia.
+
 Caquéticos: Pessoas em estado de desnutrição grave, com perda significativa de peso e massa muscular, que precisam de orientação alimentar especializada para recuperar a saúde e restabelecer o peso de forma adequada e nutritiva.
+
 Obesos: Indivíduos que enfrentam dificuldades com o excesso de peso e as complicações associadas à obesidade. Para esse grupo, o projeto oferecerá estratégias práticas e saudáveis para a perda de peso e manutenção de uma alimentação equilibrada, ajudando a reverter os efeitos negativos de uma dieta pobre em nutrientes e rica em alimentos processados.
 
 # História de Usuário
 
-NUTRICIONISTA
+**NUTRICIONISTA**
+
 Eu, como Nutricionista, quero apresentar aos meus pacientes uma ferramenta web ou mobile com minhas dicas, recomendações e cardápios. Isso permitirá que eles tenham acesso facilitado às orientações nutricionais no dia a dia, sem a necessidade de visitas frequentes ao consultório, promovendo maior adesão e praticidade na implementação das dietas.
 
-FISIOTERAPEUTA
+**FISIOTERAPEUTA**
+
 Eu, como Fisioterapeuta, quero obter os melhores cardápios de alimentação saudável. Isso me ajudará a ganhar massa muscular e identificar alimentos ricos em proteínas e carboidratos para o melhor resultado na academia.
 
-ANALISTA DE MARKETING DIGITAL
+**ANALISTA DE MARKETING DIGITAL**
+
 Eu, como Analista de Marketing Digital, quero receber dicas para melhorar minha alimentação no dia a dia. Isso me ajudará a manter um estilo de vida saudável, aumentar minha energia e produtividade, e gerenciar melhor o estresse associado ao trabalho.
 
-PESQUISADOR DE TECNOLOGIA
+**PESQUISADOR DE TECNOLOGIA**
+
 Eu, como Pesquisador de Tecnologia no Instituto de Pesquisas Tecnológicas, quero receber dicas sobre alimentação saudável. Isso me ajudará a melhorar minha saúde, combater a obesidade e otimizar os resultados da musculação na academia, promovendo um estilo de vida mais equilibrado e produtivo.
 
 # Requisitos:
 
-Requisitos Funcionais:
+**Requisitos Funcionais:**
 
 Visualização de Calorias: 
 O sistema deve permitir ao usuário consultar a contagem de calorias para todos os alimentos disponíveis no banco de dados.
 
 Formulário de Perfil de Dieta: 
 Após o primeiro login, o sistema deve apresentar um formulário para que o usuário possa fornecer informações pessoais e objetivos de saúde, a fim de recomendar o tipo de dieta mais adequado.
+
 Criação de Dieta Personalizada:O sistema deve permitir ao usuário montar uma dieta personalizada com base nas suas preferências alimentares e necessidades nutricionais.
 
 Acompanhamento de Calorias Consumidas: 
@@ -60,7 +67,7 @@ A cada determinado tempo o sistema irá avisar o usuário para beber água.
 Informar o peso semanal do usuário:
 O sistema deve pedir ao usuário para informar seu peso toda semana.
 
-Requisitos Não Funcionais:
+**Requisitos Não Funcionais:**
 
 Disponibilidade:
 O sistema deve estar disponível 24 horas por dia, 7 dias por semana.
