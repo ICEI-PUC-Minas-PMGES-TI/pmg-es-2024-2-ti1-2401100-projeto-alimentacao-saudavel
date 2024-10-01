@@ -32,24 +32,31 @@ Eu, como Pesquisador de Tecnologia no Instituto de Pesquisas Tecnológicas, quer
 
 Requisitos Funcionais:
 
-Visualização de Calorias:
+Visualização de Calorias: 
 O sistema deve permitir ao usuário consultar a contagem de calorias para todos os alimentos disponíveis no banco de dados.
-Formulário de Perfil de Dieta:
+
+Formulário de Perfil de Dieta: 
 Após o primeiro login, o sistema deve apresentar um formulário para que o usuário possa fornecer informações pessoais e objetivos de saúde, a fim de recomendar o tipo de dieta mais adequado.
-Criação de Dieta Personalizada:
-O sistema deve permitir ao usuário montar uma dieta personalizada com base nas suas preferências alimentares e necessidades nutricionais.
-Acompanhamento de Calorias Consumidas:
+Criação de Dieta Personalizada:O sistema deve permitir ao usuário montar uma dieta personalizada com base nas suas preferências alimentares e necessidades nutricionais.
+
+Acompanhamento de Calorias Consumidas: 
 O sistema deve possibilitar ao usuário registrar e acompanhar o número total de calorias consumidas diariamente, com a possibilidade de visualizar o histórico de consumo.
-Relatórios de Consumo:
+
+Relatórios de Consumo: 
 O sistema deve gerar relatórios que mostrem um resumo das calorias consumidas, comparando com os objetivos de dieta estabelecidos.
-Dicas ao usuário:
+
+Dicas ao usuário: 
 O sistema deve gerar dicas aos usuários sobre os alimentos que estão sendo selecionados e sobre qual o melhor tipo de dieta. Além de algumas informações científicas para conscientizar o usuário.
+
 Apresentador de consumo semanal:
 A cada semana o sistema deve mostrar uma janela com os alimentos que foram consumidos pelo usuário.
+
 Alerta de refeição:
 O sistema irá disparar um alarme indicando o horário que o usuário deve se alimentar.
+
 Alerta de beber água:
 A cada determinado tempo o sistema irá avisar o usuário para beber água.
+
 Informar o peso semanal do usuário:
 O sistema deve pedir ao usuário para informar seu peso toda semana.
 
@@ -57,19 +64,26 @@ Requisitos Não Funcionais:
 
 Disponibilidade:
 O sistema deve estar disponível 24 horas por dia, 7 dias por semana.
+
 Desempenho:
 O tempo de resposta para a consulta de informações sobre calorias e a criação de dietas personalizadas deve ser inferior a 5 segundos.
+
 Usabilidade:
 A interface do usuário deve ser intuitiva e fácil de navegar, com um design responsivo que se adapte a diferentes tamanhos de tela (desktop, tablet, celular).
 O sistema deve garantir que as informações pessoais dos usuários, como dados de perfil e histórico de consumo, sejam armazenadas de forma segura e criptografada.
+
 Compatibilidade:
 O software deve ser compatível com os navegadores web mais comuns (Chrome, Firefox, Safari, Edge) e ser acessível em dispositivos móveis e desktops.
+
 Manutenção:
 O software deve ser projetado de forma a facilitar a manutenção e a implementação de atualizações, sem causar interrupções significativas no serviço.
+
 Tecnologias:
 O desenvolvimento do software deve utilizar tecnologias modernas e robustas, como HTML5, CSS3, e JavaScript para a interface.
+
 Gráfico de evolução:
 Esse gráfico vai apresentar o resultado obtido a cada semana.
+
 Tema escuro e claro:
 O sistema deve permitir a alteração da cor da interface.
 
@@ -85,7 +99,7 @@ O sistema deve permitir a alteração da cor da interface.
 ![image](https://github.com/user-attachments/assets/3cdf0e94-d74f-4c15-8139-f1d9c60e7b7b)
 ![image](https://github.com/user-attachments/assets/0d0665f9-24e0-4d20-97f5-b2448499fe7c)
 ![image](https://github.com/user-attachments/assets/cabb9e1f-49af-48c7-9fc8-8539e39d9a64)
-![image](https://github.com/user-attachments/assets/dd4b2cb2-f5fb-4765-b693-9326b4980b7b)
+![image](https://github.com/user-attachments/assets/cacd932a-e427-4eab-8463-5d33198dac7d)
 
 # Organização da Equipe e divisão de papéis:
 
