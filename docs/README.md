@@ -1,131 +1,95 @@
 # Documentação do Projeto (TIDocs)
 
-Esta pasta armazena a documentação do projeto para a disciplina de **Trabalho Interdisciplinar 1** dos cursos de Tecnologia da Informação da **[PUC Minas](https://pucminas.br)**. Essa documentação é estruturada na forma de um site que fica disponível por meio do GitHub Pages e pode ser incluído, também, no site da solução hospedada. Um [exemplo publicado do TIDocs](https://webtech-puc-minas.github.io/ti1-template/) está disponível por meio do repositório do **[WebTech PUC Minas](https://github.com/webtech-pucminas)**.
+# Contexto do projeto:
 
-A documentação do projeto inclui as seguintes seções:
+O projeto de alimentação saudável tem como objetivo principal deste projeto é promover o conhecimento sobre alimentação saudável e orientar mudanças de hábitos alimentares, proporcionando uma melhora na qualidade de vida dos seus públicos-alvo. A alimentação equilibrada, rica em nutrientes essenciais, é fundamental para garantir a energia necessária para as atividades diárias, fortalecer o sistema imunológico e manter o corpo em bom funcionamento. Este projeto visa educar e incentivar a adoção de escolhas alimentares conscientes, acessíveis e sustentáveis, mostrando que é possível ter uma dieta saborosa e nutritiva ao mesmo tempo.
 
-1. Introdução
-2. Contexto
-3. Concepção
-4. Metodologia
-5. Solução
-6. FAQ (Questões frequentes)
-7. Referências Bibliográficas
+A falta de conhecimento sobre alimentação saudável é um problema crescente, que afeta diversas faixas etárias e classes sociais. Muitas pessoas, devido à rotina acelerada, à falta de acesso à informação adequada ou à influência de campanhas publicitárias, optam por dietas desequilibradas, ricas em alimentos ultraprocessados e pobres em nutrientes essenciais.
 
-O template para o site é estruturado e permite que a equipe evolua a documentação do projeto à medida que avance no desenvolvimento.
+A justificativa para a realização deste projeto sobre alimentação saudável está diretamente ligada à necessidade de promover o bem-estar e a qualidade de vida da população. Com o aumento de doenças crônicas relacionadas à má alimentação, como obesidade, diabetes e hipertensão, torna-se crucial difundir o conhecimento sobre a importância de uma dieta equilibrada. A alimentação inadequada, muitas vezes baseada em alimentos ultraprocessados, ricos em açúcares, gorduras saturadas e sódio, tem impactos diretos e cumulativos na saúde.
 
-# Orientações gerais
+Este projeto tem como foco três grupos principais:
 
-Esta seção traz explicações breves sobre o conjunto de artefatos que precisam ser incluídos na documentação do projeto com uma conjunto de links importantes para que se entenda como criar cada coisa. 
+Pessoas que buscam alimentação saudável: São indivíduos que já têm interesse em melhorar seus hábitos alimentares, mas muitas vezes encontram dificuldades devido ao excesso de informações contraditórias, falta de tempo ou desconhecimento sobre como planejar uma dieta equilibrada no dia a dia.
+Caquéticos: Pessoas em estado de desnutrição grave, com perda significativa de peso e massa muscular, que precisam de orientação alimentar especializada para recuperar a saúde e restabelecer o peso de forma adequada e nutritiva.
+Obesos: Indivíduos que enfrentam dificuldades com o excesso de peso e as complicações associadas à obesidade. Para esse grupo, o projeto oferecerá estratégias práticas e saudáveis para a perda de peso e manutenção de uma alimentação equilibrada, ajudando a reverter os efeitos negativos de uma dieta pobre em nutrientes e rica em alimentos processados.
 
-## Problema
+# História de Usuário
 
-Nesse momento você deve apresentar o problema que a sua aplicação deve resolver. No entanto, não é a hora de comentar sobre a aplicação. Descreva também o contexto em que essa aplicação será usada, se houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de fato existir, pois ainda não é a hora de apresentar requisitos detalhados ou projetos.
+NUTRICIONISTA
+Eu, como Nutricionista, quero apresentar aos meus pacientes uma ferramenta web ou mobile com minhas dicas, recomendações e cardápios. Isso permitirá que eles tenham acesso facilitado às orientações nutricionais no dia a dia, sem a necessidade de visitas frequentes ao consultório, promovendo maior adesão e praticidade na implementação das dietas.
 
-Nesse momento, o grupo pode optar por fazer uso de ferramentas como Design Thinking, que permite um olhar de ponta a ponta para o problema.
+FISIOTERAPEUTA
+Eu, como Fisioterapeuta, quero obter os melhores cardápios de alimentação saudável. Isso me ajudará a ganhar massa muscular e identificar alimentos ricos em proteínas e carboidratos para o melhor resultado na academia.
 
-**Links Úteis**:
+ANALISTA DE MARKETING DIGITAL
+Eu, como Analista de Marketing Digital, quero receber dicas para melhorar minha alimentação no dia a dia. Isso me ajudará a manter um estilo de vida saudável, aumentar minha energia e produtividade, e gerenciar melhor o estresse associado ao trabalho.
 
-- [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-- [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-- [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
+PESQUISADOR DE TECNOLOGIA
+Eu, como Pesquisador de Tecnologia no Instituto de Pesquisas Tecnológicas, quero receber dicas sobre alimentação saudável. Isso me ajudará a melhorar minha saúde, combater a obesidade e otimizar os resultados da musculação na academia, promovendo um estilo de vida mais equilibrado e produtivo.
 
-## Objetivos
+# Requisitos:
 
-Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
+Requisitos Funcionais:
 
-**Links Úteis**:
+Visualização de Calorias:
+O sistema deve permitir ao usuário consultar a contagem de calorias para todos os alimentos disponíveis no banco de dados.
+Formulário de Perfil de Dieta:
+Após o primeiro login, o sistema deve apresentar um formulário para que o usuário possa fornecer informações pessoais e objetivos de saúde, a fim de recomendar o tipo de dieta mais adequado.
+Criação de Dieta Personalizada:
+O sistema deve permitir ao usuário montar uma dieta personalizada com base nas suas preferências alimentares e necessidades nutricionais.
+Acompanhamento de Calorias Consumidas:
+O sistema deve possibilitar ao usuário registrar e acompanhar o número total de calorias consumidas diariamente, com a possibilidade de visualizar o histórico de consumo.
+Relatórios de Consumo:
+O sistema deve gerar relatórios que mostrem um resumo das calorias consumidas, comparando com os objetivos de dieta estabelecidos.
+Dicas ao usuário:
+O sistema deve gerar dicas aos usuários sobre os alimentos que estão sendo selecionados e sobre qual o melhor tipo de dieta. Além de algumas informações científicas para conscientizar o usuário.
+Apresentador de consumo semanal:
+A cada semana o sistema deve mostrar uma janela com os alimentos que foram consumidos pelo usuário.
+Alerta de refeição:
+O sistema irá disparar um alarme indicando o horário que o usuário deve se alimentar.
+Alerta de beber água:
+A cada determinado tempo o sistema irá avisar o usuário para beber água.
+Informar o peso semanal do usuário:
+O sistema deve pedir ao usuário para informar seu peso toda semana.
 
-- [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+Requisitos Não Funcionais:
 
-## Justificativa
+Disponibilidade:
+O sistema deve estar disponível 24 horas por dia, 7 dias por semana.
+Desempenho:
+O tempo de resposta para a consulta de informações sobre calorias e a criação de dietas personalizadas deve ser inferior a 5 segundos.
+Usabilidade:
+A interface do usuário deve ser intuitiva e fácil de navegar, com um design responsivo que se adapte a diferentes tamanhos de tela (desktop, tablet, celular).
+O sistema deve garantir que as informações pessoais dos usuários, como dados de perfil e histórico de consumo, sejam armazenadas de forma segura e criptografada.
+Compatibilidade:
+O software deve ser compatível com os navegadores web mais comuns (Chrome, Firefox, Safari, Edge) e ser acessível em dispositivos móveis e desktops.
+Manutenção:
+O software deve ser projetado de forma a facilitar a manutenção e a implementação de atualizações, sem causar interrupções significativas no serviço.
+Tecnologias:
+O desenvolvimento do software deve utilizar tecnologias modernas e robustas, como HTML5, CSS3, e JavaScript para a interface.
+Gráfico de evolução:
+Esse gráfico vai apresentar o resultado obtido a cada semana.
+Tema escuro e claro:
+O sistema deve permitir a alteração da cor da interface.
 
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
+# Projeto de interface:
 
-O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
+![image](https://github.com/user-attachments/assets/2863a724-9be5-435d-a9ac-9ae93dcc9eb9)
+![image](https://github.com/user-attachments/assets/7853a72e-e9fe-4d70-baf2-e90cf2dce7d1)
+![image](https://github.com/user-attachments/assets/f3505ccb-fee3-4c21-b265-ee1728941229)
+![image](https://github.com/user-attachments/assets/a1fd55f8-b498-4d3c-8c2c-3d314592e92e)
+![image](https://github.com/user-attachments/assets/9b527631-0347-4803-b9ea-27554b763e68)
+![image](https://github.com/user-attachments/assets/827006ad-e9f5-4d5b-80e6-8e9bc1aa634c)
+![image](https://github.com/user-attachments/assets/7b0efae7-dde0-4b33-807a-9d72be3cf320)
+![image](https://github.com/user-attachments/assets/3cdf0e94-d74f-4c15-8139-f1d9c60e7b7b)
+![image](https://github.com/user-attachments/assets/0d0665f9-24e0-4d20-97f5-b2448499fe7c)
+![image](https://github.com/user-attachments/assets/cabb9e1f-49af-48c7-9fc8-8539e39d9a64)
+![image](https://github.com/user-attachments/assets/dd4b2cb2-f5fb-4765-b693-9326b4980b7b)
 
-**Links Úteis**:
+# Organização da Equipe e divisão de papéis:
 
-- [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
+Nossa equipe, composta por seis membros, se reúne semanalmente para alinhar objetivos e realizar a divisão de tarefas. Esse encontro é essencial para garantir que todos estejam na mesma página em relação ao andamento do projeto e às prioridades de cada etapa. A divisão de tarefas não segue uma estrutura fixa; ao contrário, ela é flexível e ajustada conforme as necessidades individuais de cada membro. Isso nos permite acomodar a nossa rotina de maneira eficiente, garantindo que todos contribuam de acordo com sua disponibilidade e habilidades, sem sobrecarga.
 
-## Público-Alvo
 
-Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações hierárquicas, etc.
-
-Adicione informações sobre o público-alvo por meio de uma descrição textual, ou diagramas de personas, mapa de stakeholders, ou como o grupo achar mais conveniente.
-
-**Links Úteis**:
-
-- [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-- [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
-
-## Personas
-
-Relacione as personas identificadas no seu projeto e os respectivos mapas de empatia. Lembre-se que você deve ser enumerar e descrever precisamente e de forma personalizada todos os principais envolvidos com a solução almeja.
-
-**Links Úteis**:
-
-- [Persona x Público-alvo](https://flammo.com.br/blog/persona-e-publico-alvo-qual-a-diferenca/)
-- [O que é persona?](https://resultadosdigitais.com.br/blog/persona-o-que-e/)
-- [Rock Content](https://rockcontent.com/blog/personas/)
-- [Criar personas (Hotmart)](https://blog.hotmart.com/pt-br/como-criar-persona-negocio/)
-
-## Histórias de Usuários
-
-Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
-
-**Links Úteis**:
-
-- [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
-- [Como escrever boas histórias de usuário (User Stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
-
-## Requisitos
-
-Os requisitos de um projeto são classificados em dois grupos:
-
-- [Requisitos Funcionais (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
-  correspondem a uma funcionalidade que deve estar presente na plataforma (ex: cadastro de usuário).
-- [Requisitos Não Funcionais (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
-  correspondem a uma característica técnica, seja de usabilidade, desempenho, confiabilidade, segurança ou outro (ex: suporte a dispositivos iOS e Android).
-
-Lembre-se que cada requisito deve corresponder à uma e somente uma característica alvo da sua solução. Além disso, certifique-se de que todos os aspectos capturados nas Histórias de Usuário foram cobertos.
-
-**Links Úteis**:
-
-- [O que são Requisitos Funcionais e Requisitos Não Funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
-- [O que são requisitos funcionais e requisitos não funcionais?](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
-
-## User Flow
-
-Fluxo de usuário (User Flow) é uma técnica que permite ao desenvolvedor mapear todo fluxo de telas do site ou app. Essa técnica funciona para alinhar os caminhos e as possíveis ações que o usuário pode fazer junto com os membros de sua equipe.
-
-**Links Úteis**:
-
-- [User Flow: O Quê É e Como Fazer?](https://medium.com/7bits/fluxo-de-usu%C3%A1rio-user-flow-o-que-%C3%A9-como-fazer-79d965872534)
-- [User Flow vs Site Maps](http://designr.com.br/sitemap-e-user-flow-quais-as-diferencas-e-quando-usar-cada-um/)
-- [Top 25 User Flow Tools &amp; Templates for Smooth](https://www.mockplus.com/blog/post/user-flow-tools)
-
-## Wireframes
-
-Wireframes são protótipos das telas da aplicação usados em design de interface para sugerir a estrutura de um site web e seu relacionamentos entre suas páginas. Um wireframe web é uma ilustração semelhante ao layout de elementos fundamentais na interface.
-
-**Links Úteis**:
-
-- [Ferramentas de Wireframes](https://rockcontent.com/blog/wireframes/)
-- [Figma](https://www.figma.com/)
-- [Adobe XD](https://www.adobe.com/br/products/xd.html#scroll)
-- [MarvelApp](https://marvelapp.com/developers/documentation/tutorials/)
-
-## Gestão de Projetos
-
- Nesta parte do documento, você deve apresentar  o processo de trabalho baseado nas metodologias ágeis, a divisão de papéis e tarefas, as ferramentas empregadas e como foi realizada a gestão de configuração do projeto via GitHub.
-
-Coloque detalhes sobre o processo de Design Thinking e a implementação do Framework Scrum seguido pelo grupo. O grupo poderá fazer uso de ferramentas on-line para acompanhar o andamento do projeto, a execução das tarefas e o status de desenvolvimento da solução.
-
-**Links Úteis**:
-
-- [Sobre Projects - GitHub Docs](https://docs.github.com/pt/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects)
-- [Gestão de projetos com GitHub | balta.io](https://balta.io/blog/gestao-de-projetos-com-github)
-- [(460) GitHub Projects - YouTube](https://www.youtube.com/playlist?list=PLiO7XHcmTsldZR93nkTFmmWbCEVF_8F5H)
-- [11 Passos Essenciais para Implantar Scrum no seu Projeto](https://mindmaster.com.br/scrum-11-passos/)
-- [Scrum em 9 minutos](https://www.youtube.com/watch?v=XfvQWnRgxG0)
+![image](https://github.com/user-attachments/assets/b86f60c3-94d2-491e-9db1-a48f9b031d96)
