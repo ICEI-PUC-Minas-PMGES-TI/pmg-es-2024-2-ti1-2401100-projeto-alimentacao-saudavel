@@ -1,0 +1,23 @@
+nav{
+    background-color: #00BF63;
+    font-family: moderustic;
+}
+
+.montaDieta{
+    font-family: moderustic;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
+}
+
+.navbar-nav {
+    margin: 0 auto; 
+    display: flex; 
+    justify-content: center; 
+    width: 100%; 
+}
+
+.iconesDaNav{
+    gap: 10px;
+    margin-right: 2%;
+}
