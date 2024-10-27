@@ -51,7 +51,7 @@
     </div>
   </nav>
 </header>
-<body>
+<body style="background-color: rgb(217 217 217);">
   <section class="montaDieta">
     <div class="row tituloSecao align-items-center">
       <div class="col-auto">
@@ -59,9 +59,100 @@
       </div>
       <div class="col text-end">
         <div class="d-inline-block me-2">
-          <h4 style="font-size: 1.2rem;">Clique no botão ao lado para receber dicas de acordo com seu objetivo</ style="font-size: 1.2rem;">
+          <h4 style="font-size: 1.2rem;">Clique no botão para receber dicas de acordo com seu objetivo</h4>
         </div>
         <button type="button" class="btn btn-success">Dicas</button>
+      </div>
+    </div>
+    <div class="inserirAlimentos">
+      <h3>Insira os alimentos de acordo com os horários</h3>
+      <div class="container-dieta row" style="margin-top: 2%;">
+        <div class="container-refeicao col-md-4 mb-3">
+          <h4 style="font-size: 1.2rem;">Café da Manhã</h4>
+          <div class="alimentos">
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Buscar</button>
+            </form>
+          </div>
+          <div class="alimentosInseridos">
+            <ul>
+              <li>2 fatias de pão integral - 220 kcal</li>
+              <li>1 ovo cozido - 70 kcal</li>
+              <li>1 banana média - 105 kcal</li>
+              <li>1 colher de sopa de manteiga de amendoim - 95 kcal</li>
+            </ul>
+            <p>Total: 490 kcal</p>
+          </div>
+        </div>
+      
+        <div class="container-refeicao col-md-4 mb-3">
+          <h4 style="font-size: 1.2rem;">Almoço</h4>
+          <div class="alimentos">
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Buscar</button>
+            </form>
+          </div>
+          <div class="alimentosInseridos">
+            <ul>
+              <li>150g de peito de frango grelhado - 165 kcal</li>
+              <li>1 xícara de arroz integral - 218 kcal</li>
+              <li>1/2 xícara de brócolis cozidos - 27 kcal</li>
+              <li>1 colher de sopa de azeite de oliva (para temperar) - 120 kcal</li>
+            </ul>
+            <p>Total: 530 kcal</p>
+          </div>
+        </div>
+      
+        <div class="container-refeicao col-md-4 mb-3">
+          <h4 style="font-size: 1.2rem;">Jantar</h4>
+          <div class="alimentos">
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Buscar</button>
+            </form>
+          </div>
+          <div class="alimentosInseridos">
+            <ul>
+              <li>100g de filé de salmão grelhado - 206 kcal</li>
+              <li>1 xícara de quinoa cozida - 222 kcal</li>
+              <li>1/2 abacate - 120 kcal</li>
+              <li>1 xícara de espinafre cozido - 41 kcal</li>
+            </ul>
+            <p>Total: 589 kcal</p>
+          </div>
+        </div>
+      
+        <div class="container-refeicao col-md-4 mb-3">
+          <h4 style="font-size: 1.2rem;">Lanche</h4>
+          <div class="alimentos">
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Buscar</button>
+            </form>
+          </div>
+          <div class="alimentosInseridos">
+            <ul>
+              <li>1 maçã média - 95 kcal</li>
+              <li>30g de nozes - 200 kcal</li>
+              <li>1 iogurte natural (170g) - 100 kcal</li>
+            </ul>
+            <p>Total: 395 kcal</p>
+          </div>
+        </div>
+      </div>
+      <div class="container-refeicao col-md-12">
+        <h4 style="font-size: 1.2rem;">Informações Nutricionais da Dieta</h4>
+        <div class="CaloriasTotais">
+          <p><strong>Total de Proteínas:</strong> 93g</p>
+          <p><strong>Total de Gorduras:</strong> 54g</p>
+          <p><strong>Total de Carboidratos:</strong> 179g</p>
+          <h3><strong>Total de Calorias:</strong> 2004 kcal</h3>
+        </div>
+      </div>
+      <div class="save text-end">
+        <button type="button" class="btn btn-success">Salvar Dieta</button>
       </div>
     </div>
   </section>  
