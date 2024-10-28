@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f5;
+}
+
+.alimentos-section {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.alimentos-section h2 {
+    font-size: 1.8em;
+    color: #333;
+}
+
+.alimentos-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.alimento-card {
+    background-color: #fff;
+    padding: 20px;
+    width: 200px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.alimento-card h3 {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.alimento-card p {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.alimento-card .nota {
+    font-size: 1.5em;
+    color: #333;
+    font-weight: bold;
+}
