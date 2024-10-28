@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f0f0f0;
+  }
+  
+  main {
+    width: 100%;
+    padding: 2rem 10rem;
+  }
+  
+  .title-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    h1 {
+      font-size: 1.5rem;
+      font-family: "Barlow", sans-serif;
+      color: #464255;
+      font-weight: 600;
+    }
+    h3 {
+      font-size: 1rem;
+      font-family: "Barlow", sans-serif;
+      color: #A3A3A3;
+      font-weight: 600;
+    }
+  }
+  
+  .stats-overview {
+    width: 100;
+    display: flex;
+    justify-content: start;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1rem;
+    .stat-box {
+      display: flex;
+      justify-content: start;
+      box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
+      gap: 1rem;
+      align-items: start;
+      background-color: white;
+      padding: 1.5rem;
+      width: 275px;
+      height: 125px;
+      border-radius: 0.75rem;
+      i {
+        font-size: 3rem;
+        background-color: rgba(0, 227, 151, 0.15);
+        color: #464255;
+        padding: 0.75rem 1rem;
+        border-radius: 50%;
+      }
+      div {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        h3 {
+          font-size: 1.75rem;
+          color: #464255;
+        }
+        p {
+          color: #464255;
+        }
+      }
+    }
+  }
+
+  .meals-today {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    width: 100%;
+    margin-bottom: 1rem;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
+    h2 {
+      font-size: 1.25rem;
+      font-family: "Barlow", sans-serif;
+      color: #464255;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    .meal-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      gap: 1rem;
+      .meal {
+        width: 100%;
+        h3 {
+          font-size: 1rem;
+          margin-bottom: 0.5rem;
+          font-family: "Jost", sans-serif;
+          font-weight: 400;
+        }
+        ul {
+          display: flex;
+          flex-direction: column;
+          justify-content: start;
+          align-items: start;
+          gap: 0.5rem;
+          background-color: #ececec;
+          width: 100%;
+          height: 100%;
+          border-radius: 0.75rem;
+          padding: 0.5rem 1rem;
+          li {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: 'Jost', sans-serif;
+          }
+        }
+      }
+    }
+  }
+
+  .current-diet {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    width: 100%;
+    margin-bottom: 1rem;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
+    .current-diet-header {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      h2 {
+        font-size: 1.25rem;
+        font-family: "Barlow", sans-serif;
+        color: #464255;
+        font-weight: 600;
+        margin-bottom: 1rem;
+      }
+      div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        button {
+          padding: 0.5rem 0.75rem;
+          border-radius: 0.25rem;
+          background-color: #98ffd6;
+          border: none;
+          font-family: 'Jost', sans-serif;
+          cursor: pointer;
+          transition: 250ms ease-in-out;
+          &:hover {
+            background-color: #d6ffef;
+          }
+        }
+      }
+    }
+    .diet-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      gap: 1rem;
+      .diet {
+        width: 100%;
+        h3 {
+          font-size: 1rem;
+          margin-bottom: 0.5rem;
+          font-family: "Jost", sans-serif;
+          font-weight: 400;
+        }
+        ul {
+          display: flex;
+          flex-direction: column;
+          justify-content: start;
+          align-items: start;
+          gap: 0.5rem;
+          background-color: #ececec;
+          width: 100%;
+          height: 100%;
+          border-radius: 0.75rem;
+          padding: 0.5rem 1rem;
+          li {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: 'Jost', sans-serif;
+          }
+        }
+      }
+    }
+  }
+
+  .recipes {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    h2 {
+      font-size: 1.5rem;
+      font-family: "Barlow", sans-serif;
+      color: #464255;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    .recipe-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2rem;
+      .recipe-card {
+        padding: 1rem 1.5rem;
+        box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
+        background-color: white;
+        border-radius: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        h3 {
+          font-size: 1rem;
+          font-family: "Barlow", sans-serif;
+          color: #464255;
+          font-weight: 600;
+        }
+        p {
+          font-size: 0.85rem;
+          font-family: 'Jost', sans-serif;
+          color: black;
+          opacity: 75%;
+        }
+        .rating {
+          display: flex;
+          justify-content: start;
+          align-items: center;
+          gap: 0.25rem;
+        }
+      }
+    }
+  }
+
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+  }
+  
