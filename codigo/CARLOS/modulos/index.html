@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Formularios</title>
+</head>
+<body>
+    <main>
+        <form class="objetivo">
+            <div class="formulario">
+                <h4>
+                    Objetivo:
+                </h4>
+                <label for="Select">
+                    <h6>
+                        Qual seu obejetivo com a dieta:
+                    </h6>
+                </label>
+                <Select>
+                    <option value="">Perder peso</option>
+                    <option value="">Ganhar massa muscular</option>
+                    <option value="">Vida saudável</option>
+                </Select>
+            </div>
+        </form>
+        <h4>
+            Diabetico/Alergico:
+        </h4>
+        <form class="DiabAler">
+            
+                <div class="formulario">
+                    <label for="Select"><h6>Você tem diabete: </h6></label>
+                        <Select>
+                            <option value="">Não</option>
+                            <option value="">Sim</option>
+                        </Select>
+                </div>
+                <div class="formulario">
+                    <label for="Select"><h6>Alergico: </h6></label>
+                    <Select>
+                        <option value="">Não</option>
+                        <option value="">Sim</option>
+                    </Select>
+                </div>
+                <div class="alimento_alergico">
+                    <label for="alimAler"><h6>Busque pelo alimento que é alérgico: </h6></label>
+                    <input type="text">
+                    <button>Buscar</button>
+                </div>
+        </form>
+        <h4>Informações pessoais: </h4>
+        <form class="infopess">
+            <div class="formulario">
+                <label for="input"><h6>Informe seu peso:</h6></label>
+                <input type="text">
+            </div>
+            <div class="formulario">
+                <label for="input"><h6>Informe sua altura:</h6></label>
+                <input type="text">
+            </div>
+            <div class="formulario">
+                <label for="Select"><h6>Sexo: </h6></label>
+                <Select>
+                    <option value="">Masculino</option>
+                    <option value="">Feminino</option>
+                </Select>
+            </div>
+        </form>
+        <form class="imc">
+            <div class="formulario">
+                <label for="input"><h6>Calculo do IMC:</h6></label>
+                <input type="text">
+                <button>Calcular</button>
+            </div>
+        </form>
+        <div class="prox">
+        <button>Próximo</button>
+        </div>
+    </main>
+</body>
+</html>
