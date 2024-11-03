@@ -1,0 +1,166 @@
+{
+    "cards": [
+        {
+            "calories": 100,
+            "consumed": 100,
+            "remaining": 0
+        }
+    ],
+    "meals": [
+        {
+            "name": "Café da Manhã",
+            "items": [
+                {
+                    "name": "2 fatias de pão integral",
+                    "calories": 220
+                },
+                {
+                    "name": "2 ovos mexidos",
+                    "calories": 150
+                },
+                {
+                    "name": "1 xícara de café sem açúcar",
+                    "calories": 0
+                }
+            ]
+        },
+        {
+            "name": "Almoço",
+            "items": [
+                {
+                    "name": "2 fatias de pão integral",
+                    "calories": 220
+                },
+                {
+                    "name": "2 ovos mexidos",
+                    "calories": 150
+                },
+                {
+                    "name": "1 xícara de café sem açúcar",
+                    "calories": 0
+                }
+            ]
+        },
+        {
+            "name": "Lanche",
+            "items": [
+                {
+                    "name": "2 fatias de pão integral",
+                    "calories": 220
+                },
+                {
+                    "name": "2 ovos mexidos",
+                    "calories": 150
+                },
+                {
+                    "name": "1 xícara de café sem açúcar",
+                    "calories": 0
+                }
+            ]
+        },
+        {
+            "name": "Janta",
+            "items": [
+                {
+                    "name": "2 fatias de pão integral",
+                    "calories": 220
+                },
+                {
+                    "name": "2 ovos mexidos",
+                    "calories": 150
+                },
+                {
+                    "name": "1 xícara de café sem açúcar",
+                    "calories": 0
+                }
+            ]
+        }
+    ],
+    "current_diet": [
+        {
+            "name": "Café da Manhã",
+            "items": [
+                {
+                    "name": "2 fatias de pão integral",
+                    "calories": 220
+                },
+                {
+                    "name": "2 ovos mexidos",
+                    "calories": 150
+                },
+                {
+                    "name": "1 xícara de café sem açúcar",
+                    "calories": 0
+                }
+            ]
+        },
+        {
+            "name": "Almoço",
+            "items": [
+                {
+                    "name": "2 fatias de pão integral",
+                    "calories": 220
+                },
+                {
+                    "name": "2 ovos mexidos",
+                    "calories": 150
+                },
+                {
+                    "name": "1 xícara de café sem açúcar",
+                    "calories": 0
+                }
+            ]
+        },
+        {
+            "name": "Lanche",
+            "items": [
+                {
+                    "name": "2 fatias de pão integral",
+                    "calories": 220
+                },
+                {
+                    "name": "2 ovos mexidos",
+                    "calories": 150
+                },
+                {
+                    "name": "1 xícara de café sem açúcar",
+                    "calories": 0
+                }
+            ]
+        },
+        {
+            "name": "Janta",
+            "items": [
+                {
+                    "name": "2 fatias de pão integral",
+                    "calories": 220
+                },
+                {
+                    "name": "2 ovos mexidos",
+                    "calories": 150
+                },
+                {
+                    "name": "1 xícara de café sem açúcar",
+                    "calories": 0
+                }
+            ]
+        }
+    ],
+    "recipes": [
+        {
+            "name": "Arroz",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "rating": 4.5
+        },
+        {
+            "name": "Frango",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "rating": 4.5
+        },
+        {
+            "name": "Ovo",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "rating": 4.5
+        }
+    ]
+}
