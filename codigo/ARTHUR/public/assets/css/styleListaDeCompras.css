@@ -1,0 +1,115 @@
+/* Navegação */
+nav{
+    background-color: #00BF63;
+    font-family: moderustic;
+}
+
+.navbar-nav {
+    margin: 0 auto; 
+    display: flex; 
+    justify-content: center; 
+    width: 100%; 
+}
+
+.iconesDaNav{
+    gap: 10px;
+    margin-right: 2%;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+
+.montaDieta{
+    font-family: moderustic;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
+}
+
+
+.containerListaDeCompras{
+    background-color: white;
+    margin-top: 2%;
+    padding: 2%;
+    border-radius: 12px;
+}
+
+.cabecalhoTabela{
+    background-color: #00BF63;
+    color: white; 
+}
+
+table{
+    font-family: moderustic;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+.corpoDaLista{
+    background-color: #dddddd;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+
+@media (max-width: 768px) {
+    .montaDieta {
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+    .textoBotao{
+        display: none;
+    }
+
+    
+    .tituloSecao h3 {
+        font-size: 1.5rem; 
+        text-align: center;
+    }
+
+    .tituloSecao .col.text-end {
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    .containerListaDeCompras {
+        padding: 10px;
+    }
+
+    
+    .table-responsive {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch; 
+    }
+
+    .table {
+        width: 100%;
+        table-layout: fixed; 
+    }
+
+    
+    table, th, td {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .tituloSecao h3 {
+        font-size: 1.2rem;
+    }
+
+    .containerListaDeCompras {
+        padding: 5%;
+    }
+
+    th, td {
+        padding: 6px;
+    }
+}
