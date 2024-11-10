@@ -8,6 +8,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <script src="../assets/js/scriptCadastroAlimentos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Moderustic:wght@300..800&display=swap" rel="stylesheet">
     <title>NutriSmart</title>
 </head>
@@ -54,6 +55,7 @@
 </header>
 <body style="background-color: rgb(217 217 217);">
   <section class="montaDieta">
+    <pre style="display: none;" id="output"></pre>
     <div class="row tituloSecao align-items-center">
       <div class="col-auto">
         <h3>Montagem da Dieta (2/2)</h3>
@@ -72,8 +74,8 @@
           <h4 style="font-size: 1.2rem;">Café da Manhã</h4>
           <div class="alimentos">
             <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#modalDeBusca" type="submit">Buscar</button>
+              <input id="inputCafe" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#modalDeBusca" onclick="teste('inputCafe')" type="button">Buscar</button>
             </form>
           </div>
           <div class="alimentosInseridos">
@@ -91,8 +93,8 @@
           <h4 style="font-size: 1.2rem;">Almoço</h4>
           <div class="alimentos">
             <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#modalDeBusca" type="submit">Buscar</button>
+              <input  id="inputAlmoco" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#modalDeBusca" onclick="teste('inputAlmoco')" type="button">Buscar</button>
             </form>
           </div>
           <div class="alimentosInseridos">
@@ -111,7 +113,7 @@
           <div class="alimentos">
             <form class="d-flex" role="search">
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#modalDeBusca" type="submit">Buscar</button>
+              <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#modalDeBusca" onclick="teste()" type="button">Buscar</button>
             </form>
           </div>
           <div class="alimentosInseridos">
@@ -130,7 +132,7 @@
           <div class="alimentos">
             <form class="d-flex" role="search">
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#modalDeBusca" type="submit">Buscar</button>
+              <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#modalDeBusca" onclick="teste()" type="button">Buscar</button>
             </form>
           </div>
           <div class="alimentosInseridos">

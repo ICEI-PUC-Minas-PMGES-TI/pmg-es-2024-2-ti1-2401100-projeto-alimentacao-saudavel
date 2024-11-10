@@ -34,39 +34,30 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#modalDeBusca" type="submit">Buscar</button>
-            </form>
             <table class="table">
-                <thead>
+              <thead>
                   <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
+                      <th scope="col"></th>
+                      <th scope="col">#</th>
+                      <th scope="col">Alimento</th>
+                      <th scope="col">Quantidade</th>
+                      <th scope="col">Calorias</th>
                   </tr>
-                </thead>
-                <tbody>
+              </thead>
+              <tbody id="tabelaAlimentos">
                   <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
+                      <td><input type="checkbox" name="" id=""></td>
+                      <th scope="row">1</th>
+                      <td></td>
+                      <td>
+                          <input type="text">
+                      </td>
+                      <td></td>
                   </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter</td>
-                  </tr>
-                </tbody>
-              </table>
+                  <!-- Os resultados da busca serão inseridos aqui -->
+              </tbody>
+          </table>
+          
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">OK</button>
