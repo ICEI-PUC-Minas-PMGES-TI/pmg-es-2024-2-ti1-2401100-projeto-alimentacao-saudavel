@@ -3,91 +3,104 @@ document.addEventListener('DOMContentLoaded', function() {
         "alimentos": {
             "Cafe": [
                 {
-                    "nome": "Banana, prata, crua",
-                    "calorias": 98,
-                    "proteinas": 1,
-                    "carboidratos": 26,
-                    "sodio": 0
+                    "nome": "Banana, maçã, crua",
+                    "calorias": 87,
+                    "proteinas": 2,
+                    "carboidratos": 22,
+                    "sodio": 0,
+                    "quantidade": 100
                 },
                 {
                     "nome": "Pão, trigo, forma, integral",
-                    "calorias": 253,
-                    "proteinas": 9,
-                    "carboidratos": 50,
-                    "sodio": 506
+                    "calorias": 124,
+                    "proteinas": 7,
+                    "carboidratos": 35,
+                    "sodio": 354,
+                    "quantidade": 70
                 },
                 {
                     "nome": "Ovo, de galinha, inteiro, cozido/10minutos",
-                    "calorias": 52,
-                    "proteinas": 8,
-                    "carboidratos": 0,
-                    "sodio": 88
+                    "calorias": 146,
+                    "proteinas": 13,
+                    "carboidratos": 1,
+                    "sodio": 146,
+                    "quantidade": 100
                 }
             ],
             "Almoco": [
                 {
-                    "nome": "Arroz, tipo 1, cozido",
-                    "calorias": 128,
+                    "nome": "Arroz, integral, cozido",
+                    "calorias": 124,
                     "proteinas": 3,
-                    "carboidratos": 28,
-                    "sodio": 1
+                    "carboidratos": 26,
+                    "sodio": 1,
+                    "quantidade": 100
                 },
                 {
-                    "nome": "Frango, inteiro, sem pele, assado",
-                    "calorias": 422,
-                    "proteinas": 42,
+                    "nome": "Frango, peito, sem pele, cozido",
+                    "calorias": 366,
+                    "proteinas": 47,
                     "carboidratos": 0,
-                    "sodio": 105
+                    "sodio": 54,
+                    "quantidade": 150
                 }
             ],
             "Janta": [
                 {
-                    "nome": "Arroz, integral, cozido",
-                    "calorias": 494,
-                    "proteinas": 5,
-                    "carboidratos": 52,
-                    "sodio": 2
+                    "nome": "Arroz, tipo 1, cozido",
+                    "calorias": 288,
+                    "proteinas": 4,
+                    "carboidratos": 42,
+                    "sodio": 2,
+                    "quantidade": 150
                 },
                 {
-                    "nome": "Carne, bovina, acém, moído, cozido",
-                    "calorias": 479,
-                    "proteinas": 40,
-                    "carboidratos": 0,
-                    "sodio": 79
+                    "nome": "Estrogonofe de frango",
+                    "calorias": 628,
+                    "proteinas": 35,
+                    "carboidratos": 5,
+                    "sodio": 199,
+                    "quantidade": 200
                 }
             ],
             "Lanche": [
                 {
-                    "nome": "Coxinha de frango, frita",
-                    "calorias": 283,
+                    "nome": "Empada de frango, pré-cozida, assada",
+                    "calorias": 806,
                     "proteinas": 10,
-                    "carboidratos": 35,
-                    "sodio": 532
+                    "carboidratos": 71,
+                    "sodio": 787,
+                    "quantidade": 150
                 }
             ]
         },
         "totais": {
-            "calorias": "2209",
-            "proteinas": "118",
-            "carboidratos": "190",
+            "calorias": "2569",
+            "proteinas": "121",
+            "carboidratos": "202",
             "sodio": "NaN"
         }
-    }
+    };
 
     // Função para preencher a tabela com os alimentos
     function preencherTabela() {
+
+        alert("Abra o console para ver o JSON dos alimentos que estão preenchendo a lista de compras");
+
+        console.log(jsonDosAlimentos);
+
         const corpoDaLista = document.querySelector('.corpoDaLista'); // Referência ao corpo da tabela
         if (!corpoDaLista) {
             console.error('Não foi possível encontrar o corpo da tabela.');
-            return; // Para a execução se o elemento não for encontrado
+            return; 
         }
 
-        const refeições = jsonDosAlimentos.alimentos; // Objeto contendo as refeições e alimentos
-        let contador = 1; // Contador para o índice das linhas da tabela
+        const refeições = jsonDosAlimentos.alimentos; 
+        let contador = 1;
 
         // Iterar sobre cada tipo de refeição (Cafe, Almoco, Janta, Lanche)
         for (const refeição in refeições) {
-            const alimentos = refeições[refeição]; // Alimentos da refeição atual
+            const alimentos = refeições[refeição]; 
 
             // Se houver alimentos para essa refeição
             alimentos.forEach(alimento => {
@@ -98,13 +111,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 novaLinha.innerHTML = `
                     <td>${contador}</td>
                     <td>${alimento.nome} (${refeição})</td>
+                    <td>${alimento.quantidade} g</td> <!-- Quantidade em gramas -->
                     <td>${alimento.calorias} kcal</td>
                 `;
-
-                // Adicionar a nova linha no corpo da tabela
+               
                 corpoDaLista.appendChild(novaLinha);
                 
-                // Incrementar o contador para a próxima linha
                 contador++;
             });
         }
