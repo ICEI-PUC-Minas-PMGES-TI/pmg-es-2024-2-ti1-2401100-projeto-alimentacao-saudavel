@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil do Usuário</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Cabeçalho -->
+  <header class="header">
+    <div class="logo">NutriSmart</div>
+    <nav class="nav-links">
+      <a href="#dashboard">Dashboard</a>
+      <a href="#sobre-nos">Sobre Nós</a>
+      <a href="#funcionalidades">Funcionalidades</a>
+    </nav>
+    <div class="profile-icons">
+      <img src="icon1.png" alt="Ícone 1" class="icon">
+      <img src="icon2.png" alt="Ícone 2" class="icon">
+    </div>
+  </header>
+
+  <main class="profile-container">
+    <!-- Foto de Perfil -->
+    <div class="profile-picture" id="profilePicture">
+      <span id="profileInitials">AB</span>
+    </div>
+
+    <!-- Caixa de Bio -->
+    <div class="bio-section">
+      <div id="userBioDisplay">Aqui aparecerá seu objetivo...</div>
+      <button onclick="editBio()">Editar</button>
+    </div>
+
+    <!-- Progresso do Usuário -->
+    <div class="progress-section">
+      <h3>Seu Progresso</h3>
+      <div class="progress-bar">
+        <div class="progress-fill" style="width: 50%;"></div>
+      </div>
+    </div>
+
+    <!-- Alimentos Preferidos -->
+    <div class="favorite-foods-section">
+      <h3>Alimentos Preferidos</h3>
+      <ul id="favoriteFoodsList">
+        <li>Maçã</li>
+        <li>Banana</li>
+        <li>Abacate</li>
+      </ul>
+    </div>
+  </main>
+
+  <script>
+    // Função para redirecionar para a página de edição de bio
+    function editBio() {
+      window.location.href = 'edit-bio.html';
+    }
+
+    // Carregar o objetivo do usuário armazenado no localStorage
+    document.addEventListener("DOMContentLoaded", function() {
+      const userBio = localStorage.getItem("userBio");
+      if (userBio) {
+        document.getElementById("userBioDisplay").textContent = userBio;
+      }
+    });
+  </script>
+</body>
+</html>
