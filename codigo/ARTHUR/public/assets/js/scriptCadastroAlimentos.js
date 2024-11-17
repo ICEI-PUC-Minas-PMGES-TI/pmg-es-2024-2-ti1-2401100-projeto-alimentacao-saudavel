@@ -167,11 +167,17 @@ function salvarAlimentosSelecionados(tabela, modalId, refeicao) {
                 nomeInput.id = `nomeAlimento${refeicao}${lastIndex}`;
                 nomeInput.value = nomeAlimentoPadrao;
 
+                const quantidadeInputHidden = document.createElement('input');
+                quantidadeInputHidden.type = 'hidden';
+                quantidadeInputHidden.id = `quantidadeAlimento${refeicao}${lastIndex}`;
+                quantidadeInputHidden.value = quantidade;
+
                 li.appendChild(caloriasInput);
                 li.appendChild(proteinasInput);
                 li.appendChild(carboidratosInput);
                 li.appendChild(sodioInput);
                 li.appendChild(nomeInput);
+                li.appendChild(quantidadeInputHidden); // Adiciona o campo de quantidade
 
                 listaAlimentos.appendChild(li);
                 lastIndex++; // Incrementa o índice para o próximo alimento
@@ -195,6 +201,7 @@ function salvarAlimentosSelecionados(tabela, modalId, refeicao) {
     atualizarTotalSodio(totalSodioGeral);
     atualizarTotalCalorias();
 }
+
 
 
 
@@ -289,6 +296,7 @@ function salvarDieta() {
                 const proteinas = parseFloat(document.getElementById(`proteinasAlimento${secaoLower}${index}`)?.value) || 0;
                 const carboidratos = parseFloat(document.getElementById(`carboidratosAlimento${secaoLower}${index}`)?.value) || 0;
                 const sodio = parseFloat(document.getElementById(`sodioAlimento${secaoLower}${index}`)?.value) || 0;
+                const quantidade = parseFloat(document.getElementById(`quantidadeAlimento${secaoLower}${index}`)?.value) || 0; // Captura a quantidade
 
                 // Verifica se o alimento tem um nome e valor de calorias maior que zero
                 if (nome && calorias > 0) {
@@ -300,7 +308,8 @@ function salvarDieta() {
                     calorias: calorias,
                     proteinas: proteinas,
                     carboidratos: carboidratos,
-                    sodio: sodio
+                    sodio: sodio,
+                    quantidade: quantidade // Inclui a quantidade no objeto
                 };
 
                 alimentosPorRefeicao[secao].push(infoAlimento);
@@ -349,6 +358,7 @@ function salvarDieta() {
     const modal = new bootstrap.Modal(document.getElementById('salvaDieta'));
     modal.show(); // Exibe o modal
 }
+
 
 
 function recarregarPagina() {
