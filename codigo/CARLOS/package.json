@@ -1,0 +1,14 @@
+{
+  "name": "exportarpdf",
+  "version": "1.0.0",
+  "main": "lista.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "puppeteer": "^23.7.1"
+  }
+}
