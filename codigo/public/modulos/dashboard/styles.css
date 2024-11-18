@@ -256,3 +256,58 @@
       }
     }
   }
+
+  .graphs-section {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .nutrients-card, .calories-card {
+    flex-grow: 1;
+    width: 50%;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    height: 400px;
+  }
+
+  .nutrients-graph {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 7rem);
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .nutrients-graph canvas {
+    grid-row: 2;
+    width: 150px !important;
+    height: 150px !important;
+    justify-self: center;
+    pointer-events: none;
+  }
+  
+  .nutrients-label {
+    grid-row: 1;
+    text-align: center;
+  }
+  .nutrients-graph p {
+    grid-row: 3;
+    text-align: center;
+    justify-self: center;
+    align-self: center;
+    justify-content: center;
+
+  }
+  
+  .calories-graph canvas {
+    width: 100% !important;
+    height: auto !important;
+  }
+  

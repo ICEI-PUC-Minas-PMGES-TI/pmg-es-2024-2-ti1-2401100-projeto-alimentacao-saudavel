@@ -6,6 +6,16 @@
             "remaining": 0
         }
     ],
+    "graphs": [
+        {
+            "nutrients": [
+                { "label": "Proteína", "value": 81, "color": "#FF6384" },
+                { "label": "Gordura", "value": 22, "color": "#36A2EB" },
+                { "label": "Carboidrato", "value": 62, "color": "#4BC0C0" }
+            ],
+            "calories": [1400, 1500, 1600, 1700, 1500, 1800, 1900]
+        }
+    ],
     "meals": [
         {
             "name": "Café da Manhã",
