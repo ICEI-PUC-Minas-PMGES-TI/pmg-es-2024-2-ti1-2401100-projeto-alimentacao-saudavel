@@ -1,3 +1,13 @@
+function geraPDF(){
+    const content = document.querySelector("#containerListaDeCompras");
+
+    const opcoes = {
+        filename:"ListaDeCompras.pdf"
+    }
+
+    html2pdf().set(opcoes).from(content).save();
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     const jsonDosAlimentos = {
         "alimentos": {
@@ -81,6 +91,8 @@ document.addEventListener('DOMContentLoaded', function() {
             "sodio": "NaN"
         }
     };
+
+    
 
     // Função para preencher a tabela com os alimentos
     function preencherTabela() {

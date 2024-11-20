@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Moderustic:wght@300..800&display=swap" rel="stylesheet">
     <script src="../assets/js/scriptListaDeCompras.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.2/html2pdf.bundle.min.js" integrity="sha512-MpDFIChbcXl2QgipQrt1VcPHMldRILetapBl5MPCA9Y8r7qvlwx1/Mc9hNTzY+kS5kX6PdoDq41ws1HiVNLdZA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>NutriSmart</title>
 </head>
 <header>
@@ -59,11 +60,11 @@
         <h3>Lista de Compras</h3>
       </div>
       <div class="col text-end">
-        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModal">Baixar Lista</button>
+        <button type="button" class="btn btn-success" id="geraPDF" onclick="geraPDF()">Baixar Lista</button>
       </div>
     </div>
     
-    <div class="containerListaDeCompras">
+    <div id="containerListaDeCompras" class="containerListaDeCompras">
       <h3>Aqui estão seus alimentos e quantidade em que devem ser comprados</h3>
       
       <div class="table-responsive">
