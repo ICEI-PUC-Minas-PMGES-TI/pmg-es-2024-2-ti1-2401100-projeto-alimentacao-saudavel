@@ -1,169 +1,496 @@
-/* Configurações Básicas */
-/* style do perfil*/
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Corpo da página */
 body {
-    background-color: #ffffff;
-    font-family: Arial, sans-serif;
-    margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Cabeçalho */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #4CAF50;
+  padding: 10px 20px;
+}
+
+.header .logo {
+  font-size: 24px;
+  color: white;
+  font-weight: bold;
+}
+
+.header .nav-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 18px;
+}
+
+.header .profile-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.header .profile-icons .icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: white;
+  padding: 5px;
+  cursor: pointer;
+}
+
+/* Layout geral */
+.main-container {
+  display: flex;
+  padding: 20px;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-right: 20px;
+}
+
+.profile-container {
+  flex-grow: 1;
+  max-width: 800px;
+  width: 100%;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-picture {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #4CAF50;
+  margin: 0 auto 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36px;
+  color: white;
+  font-weight: bold;
+}
+
+#profileInitials {
+  font-size: 48px;
+}
+
+/* Bio e outras seções */
+.bio-section {
+  margin-bottom: 20px;
+}
+
+#userBioDisplay {
+  font-size: 18px;
+  color: #555;
+}
+
+.bio-section button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 5px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.bio-section button:hover {
+  background-color: #45a049;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header .nav-links {
     display: flex;
     flex-direction: column;
-    align-items: center;
-  }
-  
-  .header {
-    background-color: #4CAF50; /* Verde do cabeçalho */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    width: 100%;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  .logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #ffffff; /* Texto em branco para contraste */
-  }
-  
-  .nav-links {
-    display: flex;
-    gap: 20px;
-  }
-  
-  .nav-links a {
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 16px;
-    font-weight: 500;
-  }
-  
-  .profile-icons {
-    display: flex;
-    gap: 10px;
-  }
-  
-  .profile-icons .icon {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-  }
-  
-  /* Conteúdo do Perfil */
-  .profile-container {
-    text-align: center;
-    max-width: 600px;
-    width: 100%;
-    padding: 20px;
-    background-color: #ffffff;
-  }
-  
-  /* Foto de Perfil */
-  .profile-picture {
-    background-color: #b3d9b3;
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 36px;
-    color: #fff;
-    margin: 20px auto;
-  }
-  
-  /* Caixa de Bio */
-  .bio-section {
-    margin: 20px 0;
-  }
-  
-  .bio-section #userBioDisplay {
-    font-size: 16px;
-    margin-bottom: 10px;
-  }
-  
-  .bio-section button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 8px 16px;
-    border: none;
-    border-radius: 5px;
-    font-size: 14px;
-    cursor: pointer;
-  }
-  
-  .bio-section button:hover {
-    background-color: #45a049;
-  }
-  
-  /* Progresso */
-  .progress-section {
-    margin: 20px 0;
-  }
-  
-  .progress-bar {
-    width: 100%;
-    background-color: #d3e6d3;
-    height: 20px;
-    border-radius: 10px;
-    overflow: hidden;
-  }
-  
-  .progress-fill {
-    height: 100%;
-    background-color: #5cb85c;
-  }
-  
-  /* Alimentos Preferidos */
-  .favorite-foods-section {
-    margin: 20px 0;
-  }
-  
-  .favorite-foods-section ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .favorite-foods-section li {
-    background-color: #c2e0c2;
-    padding: 8px;
-    margin: 5px 0;
-    border-radius: 5px;
-  }
-  
-  /* Estilo para a página de edição de bio */
-  .edit-bio-container {
-    text-align: center;
-    max-width: 500px;
-    width: 100%;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 5px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .edit-bio-container textarea {
-    width: 100%;
-    height: 100px;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #b3d9b3;
-    resize: none;
-    font-size: 16px;
-  }
-  
-  .edit-bio-container button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
+    align-items: flex-start;
     margin-top: 10px;
   }
-  
-  .edit-bio-container button:hover {
-    background-color: #45a049;
+
+  .profile-container {
+    width: 90%;
+    padding: 15px;
   }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  /* Foto de perfil */
+.profile-picture {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #4CAF50;
+  margin: 0 auto 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  background-size: cover;
+  background-position: center;
+}
+
+#profileInitials {
+  font-size: 48px;
+}
+
+/* Alteração do botão para edição de foto */
+.profile-picture:hover {
+  opacity: 0.7;
+}
+
+}
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Páginas de Edição (Metas Nutricionais e Alimentos Preferidos) */
+.edit-bio-container {
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.edit-bio-container textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #b3d9b3;
+  margin: 10px 0;
+  resize: vertical;
+  min-height: 100px;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Páginas de Edição (Metas Nutricionais e Alimentos Preferidos) */
+.edit-nutrition-container {
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.edit-nutrition-container input, .edit-nutrition-container select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #b3d9b3;
+  margin: 10px 0;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .edit-nutrition-container {
+    width: 90%;
+    padding: 15px;
+  }
+}
+
+/* Páginas de Edição (Metas Nutricionais e Alimentos Preferidos) */
+.edit-foods-container {
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.edit-foods-container textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #b3d9b3;
+  margin: 10px 0;
+  resize: vertical;
+  min-height: 100px;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .edit-foods-container {
+    width: 90%;
+    padding: 15px;
+  }
+}
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+header {
+  background-color: #25D366;
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+header .nav-links a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+
+header .profile-icons .icon {
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+  border-radius: 50%;
+}
+
+.main-container {
+  max-width: 900px;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Foto de perfil */
+.profile-picture-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.profile-picture {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36px;
+  color: #666;
+  cursor: pointer;
+  background-size: cover;
+  background-position: center;
+}
+
+.delete-picture-btn {
+  margin-top: 10px;
+  padding: 8px 12px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Container para os detalhes do perfil */
+.profile-details-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 20px;
+}
+
+/* Seções: Dados pessoais e metas nutricionais */
+.personal-info-section,
+.nutritional-info-section {
+  flex: 1;
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+p, div {
+  margin-bottom: 8px;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+.edit-nutrition-btn {
+  margin-top: 15px;
+  padding: 8px 12px;
+  background-color: #25D366;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.edit-nutrition-btn:hover {
+  background-color: #1da855;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .profile-details-container {
+    flex-direction: column;
+  }
+
+  .personal-info-section,
+  .nutritional-info-section {
+    margin-bottom: 20px;
+  }
+}
+
+/* Estilo para a foto de perfil */
+.profile-picture-container {
+  position: relative;
+  display: inline-block;
+}
+
+.profile-picture {
+  width: 100px; /* Tamanho do círculo */
+  height: 100px; /* Tamanho do círculo */
+  border-radius: 50%; /* Torna o elemento circular */
+  background-color: #ccc; /* Cor de fundo (se não houver imagem) */
+  background-size: cover; /* Ajusta a imagem ao tamanho do elemento */
+  background-position: center; /* Centraliza a imagem */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 24px; /* Tamanho das iniciais */
+  color: white; /* Cor do texto (iniciais) */
+}
+
+input[type="file"] {
+  display: none; /* Esconde o campo de arquivo */
+}
+
+.save-picture-btn {
+  display: none; /* Inicialmente escondido */
+  margin-top: 10px;
+}
+
+.delete-picture-btn {
+  margin-top: 10px;
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
   
