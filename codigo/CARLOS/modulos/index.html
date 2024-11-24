@@ -4,79 +4,118 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
-    <title>Formularios</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <title>Formulários</title>
 </head>
 <body>
-    <main>
+    <main class="container mt-4">
         <form class="objetivo">
-            <div class="formulario">
-                <h4>
-                    Objetivo:
-                </h4>
-                <label for="Select">
-                    <h6>
-                        Qual seu obejetivo com a dieta:
-                    </h6>
-                </label>
-                <Select>
-                    <option value="">Perder peso</option>
-                    <option value="">Ganhar massa muscular</option>
-                    <option value="">Vida saudável</option>
-                </Select>
+            <div class="mb-4">
+                <h4>Objetivo:</h4>
+                <label for="objetivo" class="form-label">Qual seu objetivo com a dieta:</label>
+                <select id="objetivo" class="form-select">
+                    <option value="" disabled selected>-</option>
+                    <option value="Perder peso">Perder peso</option>
+                    <option value="Ganhar massa muscular">Ganhar massa muscular</option>
+                    <option value="Vida saudável">Vida saudável</option>
+                </select>
             </div>
         </form>
-        <h4>
-            Diabetico/Alergico:
-        </h4>
+
+        <h4>Diabético/Alergico:</h4>
         <form class="DiabAler">
-            
-                <div class="formulario">
-                    <label for="Select"><h6>Você tem diabete: </h6></label>
-                        <Select>
-                            <option value="">Não</option>
-                            <option value="">Sim</option>
-                        </Select>
+            <div class="mb-4 row">
+                <div class="col-md-4">
+                    <label for="diabetico" class="form-label">Você tem diabete:</label>
+                    <select id="diabetico" class="form-select">
+                        <option value="" disabled selected>-</option>
+                        <option value="Não">Não</option>
+                        <option value="Sim">Sim</option>
+                    </select>
                 </div>
-                <div class="formulario">
-                    <label for="Select"><h6>Alergico: </h6></label>
-                    <Select>
-                        <option value="">Não</option>
-                        <option value="">Sim</option>
-                    </Select>
+                <div class="col-md-4">
+                    <label for="alergico" class="form-label">Alérgico:</label>
+                    <select id="alergico" class="form-select">
+                        <option value="" disabled selected>-</option>
+                        <option value="Não">Não</option>
+                        <option value="Sim">Sim</option>
+                    </select>
                 </div>
-                <div class="alimento_alergico">
-                    <label for="alimAler"><h6>Busque pelo alimento que é alérgico: </h6></label>
-                    <input type="text">
-                    <button>Buscar</button>
+                <div class="col-md-4">
+                    <label for="alimAler" class="form-label">Busque pelo alimento que é alérgico:</label>
+                    <input type="text" id="alimento_alergico" class="form-control" placeholder="Ex: Amendoim">
+                    <button type="button" class="btn btn-outline-success mt-2" onclick="buscaAlimentos()" data-bs-toggle="modal" data-bs-target="#modalDeBuscaLanche">Buscar</button>
                 </div>
+            </div>
         </form>
-        <h4>Informações pessoais: </h4>
+
+        <h4>Informações Pessoais:</h4>
         <form class="infopess">
-            <div class="formulario">
-                <label for="input"><h6>Informe seu peso:</h6></label>
-                <input type="text">
-            </div>
-            <div class="formulario">
-                <label for="input"><h6>Informe sua altura:</h6></label>
-                <input type="text">
-            </div>
-            <div class="formulario">
-                <label for="Select"><h6>Sexo: </h6></label>
-                <Select>
-                    <option value="">Masculino</option>
-                    <option value="">Feminino</option>
-                </Select>
+            <div class="mb-4 row">
+                <div class="col-md-4">
+                    <label for="peso" class="form-label">Informe seu peso:</label>
+                    <input type="number" id="peso" class="form-control" placeholder="Peso">
+                </div>
+                <div class="col-md-4">
+                    <label for="altura" class="form-label">Informe sua altura:</label>
+                    <input type="number" id="altura" class="form-control" placeholder="Altura">
+                </div>
+                <div class="col-md-4">
+                    <label for="sexo" class="form-label">Sexo:</label>
+                    <select id="sexo" class="form-select">
+                        <option value="" disabled selected>-</option>
+                        <option value="Masculino">Masculino</option>
+                        <option value="Feminino">Feminino</option>
+                    </select>
+                </div>
             </div>
         </form>
+
         <form class="imc">
-            <div class="formulario">
-                <label for="input"><h6>Calculo do IMC:</h6></label>
-                <input type="text">
-                <button>Calcular</button>
+            <div class="mb-4">
+                <label for="imc" class="form-label">Cálculo do IMC:</label>
+                <input type="text" id="imc" class="form-control" disabled>
+                <div class="d-flex justify-content-end mt-2">
+                    <button type="button" id="Calculo" class="btn btn-primary me-2">Calcular</button>
+                    <button type="button" id="prox" class="btn btn-success">Próximo</button>
+                </div>
             </div>
         </form>
-        <div class="prox">
-        <button>Próximo</button>
+        <div class="listaDeAlimemtos">
+            <!-- Exibição dos alimentos selecionados -->
+            <h5>Alimentos Selecionados:</h5>
+                <ul id="listaAlimentosSelecionados">
+                <!-- Os alimentos selecionados serão exibidos aqui -->
+                </ul>
+        </div>
+    <!-- Modal de Busca Lanche -->
+    <div class="modal fade" id="modalDeBuscaLanche" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Resultados da Pesquisa</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-responsive">
+                        <thead>
+                            <tr>
+                                <th scope="col"></th>
+                                <th scope="col">#</th>
+                                <th scope="col">Alimento</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabelaAlimentosLanche">
+                            <!-- Dados da tabela -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="salvarAlimentosSelecionados('alimentosInseridosLanche', 'modalDeBuscaLanche', 'lanche')">OK</button>
+                </div>
+            </div>
         </div>
     </div>
     <!-- Fim Modal de Busca Lanche -->
@@ -84,5 +123,4 @@
 
     <script src="Formularios.js"></script>
 </body>
-<script src="Criação_do_html.js"></script>
 </html>
