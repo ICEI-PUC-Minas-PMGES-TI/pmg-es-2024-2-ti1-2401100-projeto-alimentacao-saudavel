@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerar PDF de Alimentos</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+    <h1>Gerar PDF de Alimentos Selecionados</h1>
+
+    <!-- Input para busca -->
+    <input id="inputBusca" type="text" placeholder="Digite o nome do alimento">
+    <button onclick="teste('inputBusca')">Buscar Alimentos</button>
+
+    <!-- Tabela -->
+    <table id="tabelaAlimentos">
+        <tr>
+            <th>#</th>
+            <th>Nome</th>
+            <th>Quantidade</th>
+            <th>Calorias</th>
+            <th>Ações</th>
+        </tr>
+    </table>
+
+    <!-- Botão para gerar PDF -->
+    <button id="botaoGerarPDF">Gerar PDF</button>
+
+    <script>
+        let listaFinal = []; // Lista de alimentos selecionados para o PDF
+
+        // Função para carregar alimentos do Excel
+        function teste(inputId) {
+            const inputValue = document.getElementById(inputId).value.toLowerCase();
+            fetch('Taco-4a-Edicao.xlsx')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Erro ao carregar o arquivo Excel');
+                    }
+                    return response.arrayBuffer();
+                })
+                .then(data => {
+                    const workbook = XLSX.read(data, { type: 'array' });
+                    const worksheet = workbook.Sheets[workbook.SheetNames[0]];
+                    const jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
+
+                    const alimentosEncontrados = buscarAlimentosPorNome(jsonData, inputValue);
+                    atualizarTabela(alimentosEncontrados);
+                })
+                .catch(error => console.error('Erro ao carregar os dados:', error));
+        }
+
+        // Função para buscar alimentos pelo nome
+        function buscarAlimentosPorNome(jsonData, nome) {
+            return jsonData.filter(linha => linha[1] && linha[1].toLowerCase().includes(nome));
+        }
+
+        // Função para atualizar a tabela com os resultados
+        function atualizarTabela(alimentos) {
+            const tabela = document.getElementById('tabelaAlimentos');
+            tabela.innerHTML = `
+                <tr>
+                    <th>#</th>
+                    <th>Nome</th>
+                    <th>Quantidade</th>
+                    <th>Calorias</th>
+                    <th>Ações</th>
+                </tr>
+            `;
+
+            alimentos.forEach((alimento, index) => {
+                const novaLinha = document.createElement('tr');
+                novaLinha.innerHTML = `
+                    <th>${index + 1}</th>
+                    <td>${alimento[1] || 'Não especificado'}</td>
+                    <td><input type="text" placeholder="Quantidade"></td>
+                    <td>${alimento[3] || '0 kcal'}</td>
+                    <td><button onclick="adicionarAlimento(${index})">Adicionar à Lista</button></td>
+                `;
+                novaLinha.dataset.index = index;
+                novaLinha.dataset.nome = alimento[1] || 'Não especificado';
+                novaLinha.dataset.calorias = alimento[3] || '0 kcal';
+                tabela.appendChild(novaLinha);
+            });
+        }
+
+        // Função para adicionar um alimento da tabela à lista final
+        function adicionarAlimento(index) {
+            const linha = document.querySelector(`tr[data-index="${index}"]`);
+            const nome = linha.dataset.nome;
+            const calorias = linha.dataset.calorias;
+            const quantidade = linha.querySelector('input[type="text"]').value;
+
+            if (!quantidade) {
+                alert('Por favor, insira uma quantidade antes de adicionar.');
+                return;
+            }
+
+            listaFinal.push({ nome, quantidade, calorias });
+            alert(`Alimento "${nome}" adicionado à lista com sucesso!`);
+        }
+
+        // Função para gerar o PDF
+        function gerarPDF() {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+
+            doc.setFont('Helvetica', 'normal');
+            doc.setFontSize(12);
+            let y = 10;
+
+            doc.text('Lista de Alimentos Selecionados', 10, y);
+            y += 10;
+
+            if (listaFinal.length === 0) {
+                doc.text('Nenhum alimento foi selecionado.', 10, y);
+            } else {
+                listaFinal.forEach((item, index) => {
+                    doc.text(
+                        `${index + 1}. Nome: ${item.nome}, Quantidade: ${item.quantidade}, Calorias: ${item.calorias}`,
+                        10,
+                        y
+                    );
+                    y += 10;
+
+                    if (y > 280) {
+                        doc.addPage();
+                        y = 10;
+                    }
+                });
+            }
+
+            doc.save('Lista_de_Alimentos.pdf');
+        }
+
+        // Evento no botão para gerar PDF
+        document.getElementById('botaoGerarPDF').addEventListener('click', gerarPDF);
+    </script>
+</body>
+</html>
