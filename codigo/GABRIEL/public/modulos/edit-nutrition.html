@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editar Metas Nutricionais</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="edit-nutrition-container">
+    <h2>Defina suas Metas Nutricionais</h2>
+    <label for="caloriesGoalInput">Calorias diárias recomendadas:</label>
+    <input type="number" id="caloriesGoalInput" placeholder="Digite a quantidade de calorias">
+    
+    <label for="userGoalInput">Objetivo:</label>
+    <select id="userGoalInput">
+      <option value="Perder Peso">Perder Peso</option>
+      <option value="Manter Peso">Manter Peso</option>
+      <option value="Ganhar Massa Muscular">Ganhar Massa Muscular</option>
+    </select>
+    
+    <button onclick="saveNutrition()">Salvar</button>
+  </main>
+
+  <script>
+    // Função para salvar as metas nutricionais do usuário
+    function saveNutrition() {
+      const caloriesGoal = document.getElementById("caloriesGoalInput").value;
+      const userGoal = document.getElementById("userGoalInput").value;
+
+      localStorage.setItem("caloriesGoal", caloriesGoal); // Armazena as calorias recomendadas
+      localStorage.setItem("userGoal", userGoal); // Armazena o objetivo do usuário
+
+      window.location.href = 'perfil.html'; // Redireciona para a página de perfil
+    }
+
+    // Carregar as metas nutricionais existentes (se houver)
+    document.addEventListener("DOMContentLoaded", function() {
+      const caloriesGoal = localStorage.getItem("caloriesGoal");
+      const userGoal = localStorage.getItem("userGoal");
+
+      if (caloriesGoal) {
+        document.getElementById("caloriesGoalInput").value = caloriesGoal;
+      }
+      if (userGoal) {
+        document.getElementById("userGoalInput").value = userGoal;
+      }
+    });
+  </script>
+</body>
+</html>
