@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #eafbf0; 
+}
+
+.container {
+  display: flex;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 1200px;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 25%;
+  background-color: #4caf50; 
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.profile img {
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.profile h2 {
+  font-size: 1.5rem;
+}
+
+.main-content {
+  width: 75%;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 10px;
+  color: #4caf50;
+}
+
+.balance-display {
+  background-color: #f0fff4;
+  border: 2px solid #4caf50;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.challenge-item, .reward-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.challenge-item button {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.challenge-item button:hover {
+  background-color: #45a049;
+}
+
+.reward-item img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  opacity: 0.5; 
+}
+
+.reward-item span {
+  color: #777;
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #ffffff;
+    border: 2px solid #4caf50;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    z-index: 1000;
+    width: 300px;
+  }
+  
+  .popup.hidden {
+    display: none;
+  }
+  
+  .popup-content img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  
+  .popup-content button {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .popup-content button:hover {
+    background-color: #45a049;
+  }
+  
