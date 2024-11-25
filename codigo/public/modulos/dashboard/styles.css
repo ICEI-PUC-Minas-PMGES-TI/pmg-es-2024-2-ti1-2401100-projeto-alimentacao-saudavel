@@ -263,6 +263,12 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 1rem;
+    h1 {
+      font-size: 1.25rem;
+      font-family: "Barlow", sans-serif;
+      color: #464255;
+      font-weight: 600;
+    }
   }
   
   .nutrients-card, .calories-card {
