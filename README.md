@@ -17,6 +17,13 @@ NutriSmart é uma plataforma projetada para pessoas que desejam adotar uma vida 
 * João Paulo Carneiro Aramuni
 * Michelle Hanne Soares de Andrade
 
+## Documentação e Código
+
+| **Artefato**   | **Nome Artefato**                                                                                                                 |
+|----------------|-----------------------------------------------------------------------------------------------------------------------------------|
+| **Documentação** | [Documentação do projeto](https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-2-ti1-2401100-projeto-alimentacao-saudavel/tree/main/docs) |
+| **Código**       | [Código do projeto](https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-2-ti1-2401100-projeto-alimentacao-saudavel/tree/main/codigo)       |
+
 ## Instruções de utilização
 
 Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.
