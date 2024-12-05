@@ -1,5 +1,5 @@
 # NutriSmart
-<img src="https://raw.githubusercontent.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-2-ti1-2401100-projeto-alimentacao-saudavel/master/docs/assets/images/imagemLogo.jpg" height="150" width="auto">
+<img src="https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-2-ti1-2401100-projeto-alimentacao-saudavel/blob/master/docs/assets/images/imagemLogo.jpg?raw=true" height="150" width="auto">
 
 NutriSmart é uma plataforma projetada para pessoas que desejam adotar uma vida mais saudável, incluindo aquelas com sobrepeso, subnutrição, restrições alimentares ou que buscam organizar melhor suas dietas. Com o NutriSmart, é possível criar dietas personalizadas de acordo com suas metas, recebendo orientações específicas para alcançar seus objetivos. A plataforma conta com lembretes inteligentes que ajudam a manter a regularidade na alimentação e na hidratação ao longo do dia. Além disso, oferece um sistema de pontuação que torna o progresso ainda mais motivador, permitindo acompanhar seus resultados por meio de um painel detalhado. Para complementar, disponibiliza uma seção com vídeos educativos sobre saúde, bem-estar e práticas para uma vida equilibrada. NutriSmart transforma o cuidado com a saúde em uma experiência simples, prática e inspiradora.
 
