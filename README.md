@@ -1,6 +1,6 @@
-# Nome do projeto
+# NutriSmart
 
-Escreva um ou dois parágrafo resumindo o objetivo do seu projeto.
+NutriSmart é uma plataforma projetada para pessoas que desejam adotar uma vida mais saudável, incluindo aquelas com sobrepeso, subnutrição, restrições alimentares ou que buscam organizar melhor suas dietas. Com o NutriSmart, é possível criar dietas personalizadas de acordo com suas metas, recebendo orientações específicas para alcançar seus objetivos. A plataforma conta com lembretes inteligentes que ajudam a manter a regularidade na alimentação e na hidratação ao longo do dia. Além disso, oferece um sistema de pontuação que torna o progresso ainda mais motivador, permitindo acompanhar seus resultados por meio de um painel detalhado. Para complementar, disponibiliza uma seção com vídeos educativos sobre saúde, bem-estar e práticas para uma vida equilibrada. NutriSmart transforma o cuidado com a saúde em uma experiência simples, prática e inspiradora.
 
 ## Alunos integrantes da equipe
 
@@ -13,8 +13,9 @@ Escreva um ou dois parágrafo resumindo o objetivo do seu projeto.
 
 ## Professores responsáveis
 
-* Nome completo do professor 1
-* Nome completo do professor 2
+* Diego Augusto de Faria Barros
+* João Paulo Carneiro Aramuni
+* Michelle Hanne Soares de Andrade
 
 ## Instruções de utilização
 
