@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/css/styleCadastroAlimentos.css">
+    <link rel="stylesheet" href="../assets/styleListaDeCompras.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
-    <script src="../assets/js/scriptCadastroAlimentos.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Moderustic:wght@300..800&display=swap" rel="stylesheet">
+    <script src="../assets/scriptListaDeCompras.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.2/html2pdf.bundle.min.js" integrity="sha512-MpDFIChbcXl2QgipQrt1VcPHMldRILetapBl5MPCA9Y8r7qvlwx1/Mc9hNTzY+kS5kX6PdoDq41ws1HiVNLdZA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>NutriSmart</title>
 </head>
 <header>
-  <nav class="navbar navbar-expand-lg navbar-light">
+  <nav class="navbar navbar-expand-lg navbar-light" style=" overflow-x: hidden;">
     <div class="container-fluid">
         <a href="index.html" style="text-decoration: none; color: black;">
           <svg width="100" height="50" viewBox="0 0 650 650" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -53,110 +53,39 @@
     </div>
   </nav>
 </header>
-<body style="background-color: rgb(217 217 217);">
-  <section class="montaDieta">
-    <pre style="display: none;" id="output"></pre>
+<body style="background-color: rgb(217 217 217);  overflow-x: hidden;">
+  <section class="montaDieta" style="overflow-x: hidden;">
     <div class="row tituloSecao align-items-center">
       <div class="col-auto">
-        <h3>Montagem da Dieta (2/2)</h3>
+        <h3>Lista de Compras</h3>
       </div>
       <div class="col text-end">
-        <div class="d-inline-block me-2">
-          <h4 style="font-size: 1.2rem;">Clique no botão para receber dicas de acordo com seu objetivo</h4>
-        </div>
-        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModal">Dicas</button>
+        <button type="button" class="btn btn-success" id="geraPDF" onclick="geraPDF()">Baixar Lista</button>
       </div>
     </div>
-    <div class="inserirAlimentos">
-      <h3>Insira os alimentos de acordo com os horários</h3>
-      <div class="container-dieta row" style="margin-top: 2%;">
-        <div class="container-refeicao col-md-4 mb-3" id="cafeDaManha">
-          <h4 style="font-size: 1.2rem;">Café da Manhã</h4>
-          <div class="alimentos">
-            <form class="d-flex" role="search">
-              <input id="inputCafe" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#modalDeBusca" onclick="buscaAlimentos('inputCafe', 'modalDeBusca', 'cafe')" type="button">Buscar</button>
-            </form>
-          </div>
-          <div id="alimentosInseridosCafe" class="alimentosInseridos">
-            <ul>
-
-            </ul>
-            <p>Total: 0 kcal</p>
-          </div>
-        </div>
+    
+    <div id="containerListaDeCompras" class="containerListaDeCompras">
+      <h3>Aqui estão seus alimentos e quantidade em que devem ser comprados</h3>
       
-        <div class="container-refeicao col-md-4 mb-3" id="almoco">
-          <h4 style="font-size: 1.2rem;">Almoço</h4>
-          <div class="alimentos">
-            <form class="d-flex" role="search">
-              <input  id="inputAlmoco" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#modalDeBuscaAlmoco" onclick="buscaAlimentos('inputAlmoco', 'modalDeBuscaAlmoco', 'almoco')" type="button">Buscar</button>
-            </form>
-          </div>
-          <div class="alimentosInseridos" id="alimentosInseridosAlmoco">
-            <ul>
-
-            </ul>
-            <p>Total: 0 kcal</p>
-          </div>
-        </div>
-      
-        <div class="container-refeicao col-md-4 mb-3" id="janta">
-          <h4 style="font-size: 1.2rem;">Jantar</h4>
-          <div class="alimentos">
-            <form class="d-flex" role="search">
-              <input id="inputJanta" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#modalDeBuscaJanta" onclick="buscaAlimentos('inputJanta', 'modalDeBuscaJanta', 'janta')"  type="button">Buscar</button>
-            </form>
-          </div>
-          <div class="alimentosInseridos" id="alimentosInseridosJanta">
-            <ul>
-
-            </ul>
-            <p>Total: 0 kcal</p>
-          </div>
-        </div>
-      
-        <div class="container-refeicao col-md-4 mb-3" id="lanche">
-          <h4 style="font-size: 1.2rem;">Lanche</h4>
-          <div class="alimentos">
-            <form class="d-flex" role="search">
-              <input id="inputLanche" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#modalDeBuscaLanche" onclick="buscaAlimentos('inputLanche', 'modalDeBuscaLanche', 'lanche')"  type="button">Buscar</button>
-            </form>
-          </div>
-          <div class="alimentosInseridos" id="alimentosInseridosLanche">
-            <ul>
-
-            </ul>
-            <p>Total: 0 kcal</p>
-          </div>
-        </div>
-      </div>
-      <div class="container-refeicao col-12 mb-3">
-        <h4 style="font-size: 1.2rem;">Informações Nutricionais da Dieta</h4>
-        <div class="CaloriasTotais">
-          <p><strong>Total de Proteínas:</strong> <span id="totalProteinas"></span></p>
-          <p><strong>Total de Sódio:</strong> <span id="totalSodio"></span></p>
-          <p><strong>Total de Carboidratos:</strong> <span id="totalCarboidratos"></span></p>
-          <h3><strong>Total de Calorias:</strong> <span id="totalCalorias"></span></h3>
-          <input type="hidden" id="valorTotalProteinas">
-          <input type="hidden" id="valorTotalSodio">
-          <input type="hidden" id="valorTotalCarboidratos">
-          <input type="hidden" id="valorTotalCalorias">
-        </div>
-      </div>
-      
-      <div class="save text-end">
-        <button type="button" class="btn btn-success" onclick="salvarDieta()">Salvar Dieta</button>
+      <div class="table-responsive">
+        <table class="table">
+          <thead class="cabecalhoTabela">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Nome do Alimentos</th>
+              <th scope="col">Quantidade em gramas</th>
+              <th scope="col">Calorias</th>
+            </tr>
+          </thead>
+          <tbody class="corpoDaLista">
+            
+          </tbody>
+        </table>
       </div>
     </div>
   </section>  
-
   <div id="modalContainer"></div>
-
-  <footer class="text-center text-lg-start bg-light text-muted" style="margin-top: 20px;">
+  <footer class="text-center text-lg-start bg-light text-muted" style="margin-top: 150px;  overflow-x: hidden;">
     <div class="container p-4">
         <div class="row">
             <div class="col-lg-6 col-md-12 mb-4">

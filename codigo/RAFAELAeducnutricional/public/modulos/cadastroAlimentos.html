@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/styleCadastroAlimentos.css">
+    <link rel="stylesheet" href="../assets/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <script src="../assets/scriptCadastroAlimentos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Moderustic:wght@300..800&display=swap" rel="stylesheet">
+    <title>NutriSmart</title>
+</head>
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid">
+          <a href="index.html" style="text-decoration: none; color: black;">
+              <!-- Inserir logo -->
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">DashBoard</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Sobre Nós</a></li>
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Funcionalidades</a>
+                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="#">Receitas Saudáveis</a></li>
+                          <li><a class="dropdown-item" href="cadastroAlimentos.html">Montagem de Dieta</a></li>
+                          <li><a class="dropdown-item" href="educacaoNutricional.html">Educação Nutricional</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="#">Controle das Calorias</a></li>
+                      </ul>
+                  </li>
+              </ul>
+              <div class="d-flex iconesDaNav">
+                  <a class="nav-link position-relative" style="color: black; background-color: white; border-radius: 55px;" href="#" title="Notificações">
+                      <i class="bi bi-bell"></i>
+                      <span id="alertCount" class="badge rounded-pill bg-danger position-absolute top-0 start-100 translate-middle" style="display: none;">0</span>
+                  </a>
+                  <a class="nav-link" style="color: black; background-color: white; border-radius: 55px;" href="#" title="Perfil">
+                      <i class="bi bi-person"></i>
+                  </a>
+              </div>
+          </div>
+      </div>
+  </nav>
+</header>
+<body style="background-color: rgb(217 217 217);">
+  <section class="montaDieta">
+    <pre style="display: none;" id="output"></pre>
+    <div class="row tituloSecao align-items-center">
+      <div class="col-auto">
+        <h3>Montagem da Dieta (2/2)</h3>
+      </div>
+      <div class="col text-end">
+        <div class="d-inline-block me-2">
+          <h4 style="font-size: 1.2rem;">Clique no botão para receber dicas de acordo com seu objetivo</h4>
+        </div>
+        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModal">Dicas</button>
+      </div>
+    </div>
+    <div class="inserirAlimentos">
+      <h3>Insira os alimentos de acordo com os horários</h3>
+      <div class="container-dieta row" style="margin-top: 2%;">
+        <div class="container-refeicao col-md-4 mb-3" id="cafeDaManha">
+          <h4 style="font-size: 1.2rem;">Café da Manhã</h4>
+          <div class="alimentos">
+            <form class="d-flex" role="search">
+              <input id="inputCafe" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#modalDeBusca" onclick="buscaAlimentos('inputCafe', 'modalDeBusca', 'cafe')" type="button">Buscar</button>
+            </form>
+          </div>
+          <div id="alimentosInseridosCafe" class="alimentosInseridos">
+            <ul>
+
+            </ul>
+            <p>Total: 0 kcal</p>
+          </div>
+        </div>
+      
+        <div class="container-refeicao col-md-4 mb-3" id="almoco">
+          <h4 style="font-size: 1.2rem;">Almoço</h4>
+          <div class="alimentos">
+            <form class="d-flex" role="search">
+              <input  id="inputAlmoco" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#modalDeBuscaAlmoco" onclick="buscaAlimentos('inputAlmoco', 'modalDeBuscaAlmoco', 'almoco')" type="button">Buscar</button>
+            </form>
+          </div>
+          <div class="alimentosInseridos" id="alimentosInseridosAlmoco">
+            <ul>
+
+            </ul>
+            <p>Total: 0 kcal</p>
+          </div>
+        </div>
+      
+        <div class="container-refeicao col-md-4 mb-3" id="janta">
+          <h4 style="font-size: 1.2rem;">Jantar</h4>
+          <div class="alimentos">
+            <form class="d-flex" role="search">
+              <input id="inputJanta" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#modalDeBuscaJanta" onclick="buscaAlimentos('inputJanta', 'modalDeBuscaJanta', 'janta')"  type="button">Buscar</button>
+            </form>
+          </div>
+          <div class="alimentosInseridos" id="alimentosInseridosJanta">
+            <ul>
+
+            </ul>
+            <p>Total: 0 kcal</p>
+          </div>
+        </div>
+      
+        <div class="container-refeicao col-md-4 mb-3" id="lanche">
+          <h4 style="font-size: 1.2rem;">Lanche</h4>
+          <div class="alimentos">
+            <form class="d-flex" role="search">
+              <input id="inputLanche" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#modalDeBuscaLanche" onclick="buscaAlimentos('inputLanche', 'modalDeBuscaLanche', 'lanche')"  type="button">Buscar</button>
+            </form>
+          </div>
+          <div class="alimentosInseridos" id="alimentosInseridosLanche">
+            <ul>
+
+            </ul>
+            <p>Total: 0 kcal</p>
+          </div>
+        </div>
+      </div>
+      <div class="container-refeicao col-12 mb-3">
+        <h4 style="font-size: 1.2rem;">Informações Nutricionais da Dieta</h4>
+        <div class="CaloriasTotais">
+          <p><strong>Total de Proteínas:</strong> <span id="totalProteinas"></span></p>
+          <p><strong>Total de Sódio:</strong> <span id="totalSodio"></span></p>
+          <p><strong>Total de Carboidratos:</strong> <span id="totalCarboidratos"></span></p>
+          <h3><strong>Total de Calorias:</strong> <span id="totalCalorias"></span></h3>
+          <input type="hidden" id="valorTotalProteinas">
+          <input type="hidden" id="valorTotalSodio">
+          <input type="hidden" id="valorTotalCarboidratos">
+          <input type="hidden" id="valorTotalCalorias">
+        </div>
+      </div>
+      
+      <div class="save text-end">
+        <button type="button" class="btn btn-success" onclick="salvarDieta()">Salvar Dieta</button>
+      </div>
+    </div>
+  </section>  
+
+  <div id="modalContainer"></div>
+
+  <footer class="text-center text-lg-start bg-light text-muted" style="margin-top: 20px;">
+    <div class="container p-4">
+        <div class="row">
+            <div class="col-lg-6 col-md-12 mb-4">
+                <h5 class="text-uppercase">NutriSmart</h5>
+                <p>
+                    Sua plataforma de nutrição e bem-estar, ajudando você a alcançar seus objetivos de saúde de forma saudável e sustentável.
+                </p>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4">
+                <h5 class="text-uppercase">Links Úteis</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" style="text-decoration: none;" class="text-dark">Sobre Nós</a></li>
+                    <li><a href="#" style="text-decoration: none;" class="text-dark">Funcionalidades</a></li>
+                    <li><a href="#" style="text-decoration: none;" class="text-dark">Receitas Saudáveis</a></li>
+                    <li><a href="#" style="text-decoration: none;" class="text-dark">Contato</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4">
+                <h5 class="text-uppercase">Contato</h5>
+                <ul class="list-unstyled">
+                    <li>Email: contato@nutrismart.com</li>
+                    <li>Telefone: (xx) xxxxx-xxxx</li>
+                    <li>Endereço: Rua exemplo Numero Exemplo</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center p-3">
+        &copy; 2024 NutriSmart. Todos os direitos reservados.
+    </div>
+</footer>
+</body>
+</html>

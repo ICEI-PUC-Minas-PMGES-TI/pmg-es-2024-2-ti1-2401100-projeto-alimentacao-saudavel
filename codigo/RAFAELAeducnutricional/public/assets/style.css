@@ -1,72 +1,93 @@
-nav{
+/* Estilo para a navegação */
+nav {
     background-color: #00BF63;
-    font-family: moderustic;
-}
-
-.montaDieta{
-    font-family: moderustic;
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-top: 5%;
+    font-family: 'Moderustic', sans-serif;
 }
 
 .navbar-nav {
-    margin: 0 auto; 
-    display: flex; 
-    justify-content: center; 
-    width: 100%; 
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
-.iconesDaNav{
+.iconesDaNav {
     gap: 10px;
     margin-right: 2%;
 }
 
-.inserirAlimentos{
-    background-color: white;
+/* Contagem de alertas */
+.position-relative {
+    position: relative;
+}
+
+#alertCount {
+    font-size: 12px;
+    color: white;
+    background-color: red;
+    padding: 2px 6px;
+    border-radius: 50%;
+}
+
+/* Estilo para alertas */
+.modal-body .alert {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.modal-footer .btn-primary {
+    background-color: #FFDF00;
+    color: black;
+    font-weight: bold;
+}
+
+/* Estilo para as seções */
+.inserirAlimentos,
+.alimentosInseridos,
+.CaloriasTotais {
+    background-color: #cdcdcd;
+    border-radius: 12px;
+    padding: 2%;
     margin-top: 2%;
-    padding: 2%;
-    border-radius: 12px;
 }
 
-.container-refeicao{
-    margin-top: 3%;
-    width: 33%;
+.inserirAlimentos {
+    background-color: white;
 }
 
-.alimentosInseridos{
-    margin-top: 3%;
-    background-color: #cdcdcd;
-    padding: 2%;
-    border-radius: 12px;
-
-    li{
-        margin-top: 10px;
-    }
-
-    p{
-        color: red;
-    }
-
-    
+.alimentosInseridos li {
+    margin-top: 10px;
 }
 
-.CaloriasTotais{
-    background-color: #cdcdcd;
-    padding: 2%;
-    border-radius: 12px;
-
-    h3{
-        color: red;
-    }
+.alimentosInseridos p,
+.CaloriasTotais h3 {
+    color: red;
 }
 
-.container-dieta{
+/* Layout e containers */
+.container-dieta {
     display: flex;
     flex-wrap: wrap;
     margin-top: 5%;
 }
 
-.save{
+.save {
     margin-top: 1%;
+}
+
+.container-refeicao {
+    margin-top: 3%;
+    width: 33%;
+}
+
+/* Seção Educação Nutricional */
+.montaDieta {
+    font-family: 'Moderustic', sans-serif;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
 }
