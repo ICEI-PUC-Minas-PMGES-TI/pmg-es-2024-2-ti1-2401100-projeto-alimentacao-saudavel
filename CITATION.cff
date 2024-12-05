@@ -1,31 +1,39 @@
 cff-version: 1.0.1
 message: Please cite this software using these metadata.
-title: 
+title: NutriSmart
 authors:
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names:
+  - family-names: Panzera
+    given-names: Arthur Lara
+  - family-names: Lima
+    given-names: Bernardo Antonio Meirelles
+  - family-names: Santos
+    given-names: Carlos Eduardo Sousa
+  - family-names: Coelho
+    given-names: Gabriel dos Santos Silva
+  - family-names: Gabriel
+    given-names: João
+  - family-names: Oliveira Ribeiro
+    given-names: Rafaela
   - name-suffix: Professor
     affiliation: PUC Minas
-    family-names: 
-    given-names: 
+    family-names: Barros
+    given-names: Diego Augusto de Faria
   - name-suffix: Professor
     affiliation: PUC Minas
-    family-names: 
-    given-names: 
+    family-names: Aramuni
+    given-names: João Paulo Carneiro
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Michelle Hanne Soares de
+    given-names: Andrade
 keywords:
-  - 
-  - 
-repository-code: 
+  - Nutrição
+  - Alimentos
+  - html
+  - css
+  - javaScript
+  - bootstrap
+repository-code: https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-2-ti1-2401100-projeto-alimentacao-saudavel
 license: CC-BY-4.0
 version: 1.0.0
-date-released: 2022-07-14
+date-released: 2024-12-09
