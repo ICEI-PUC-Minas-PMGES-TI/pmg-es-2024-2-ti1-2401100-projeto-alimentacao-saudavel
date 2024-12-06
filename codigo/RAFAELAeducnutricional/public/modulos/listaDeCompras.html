@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/styleListaDeCompras.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Moderustic:wght@300..800&display=swap" rel="stylesheet">
+    <script src="../assets/scriptListaDeCompras.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.2/html2pdf.bundle.min.js" integrity="sha512-MpDFIChbcXl2QgipQrt1VcPHMldRILetapBl5MPCA9Y8r7qvlwx1/Mc9hNTzY+kS5kX6PdoDq41ws1HiVNLdZA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>NutriSmart</title>
+</head>
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+        <a href="index.html" style="text-decoration: none; color: black;">
+          <svg width="100" height="50" viewBox="0 0 650 650" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M425.446 356.23C424.736 348.418 421.575 342.345 415.965 338.013C410.425 333.609 402.506 331.408 392.207 331.408C385.389 331.408 379.707 332.295 375.162 334.071C370.617 335.847 367.207 338.297 364.935 341.422C362.662 344.476 361.49 347.991 361.419 351.969C361.277 355.236 361.916 358.112 363.337 360.598C364.828 363.084 366.959 365.285 369.729 367.203C372.57 369.05 375.979 370.683 379.956 372.104C383.933 373.524 388.408 374.767 393.379 375.832L412.129 380.094C422.925 382.437 432.442 385.562 440.68 389.469C448.99 393.375 455.95 398.027 461.561 403.425C467.243 408.822 471.54 415.037 474.452 422.068C477.364 429.099 478.855 436.983 478.926 445.719C478.855 459.497 475.375 471.322 468.486 481.195C461.597 491.067 451.689 498.631 438.763 503.886C425.908 509.142 410.389 511.77 392.207 511.77C373.955 511.77 358.045 509.035 344.48 503.567C330.915 498.098 320.368 489.788 312.84 478.638C305.311 467.487 301.44 453.389 301.227 436.344H351.724C352.151 443.375 354.033 449.234 357.371 453.922C360.709 458.609 365.29 462.16 371.114 464.575C377.009 466.99 383.827 468.197 391.568 468.197C398.67 468.197 404.707 467.239 409.679 465.321C414.722 463.403 418.592 460.74 421.291 457.331C423.99 453.922 425.375 450.016 425.446 445.612C425.375 441.493 424.097 437.977 421.611 435.065C419.125 432.082 415.29 429.526 410.105 427.395C404.992 425.193 398.457 423.169 390.503 421.322L367.705 415.996C348.813 411.663 333.933 404.668 323.067 395.009C316.966 389.546 312.59 383.009 309.936 375.398L322 359L338.5 336.5L359 308.5L372.828 289.275C379.017 288.315 385.513 287.835 392.314 287.835C409.217 287.835 423.884 290.712 436.313 296.464C448.813 302.146 458.507 310.136 465.396 320.435C472.286 330.733 475.801 342.665 475.943 356.23H425.446Z" fill="white"/>
+            <path d="M360.202 165.818L360.5 281L300.633 362.5L228.632 258.077H227.247V384H174.513V165.818H219.896L305.763 291.528H307.574V165.818H360.202Z" fill="white"/>
+            </svg>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">DashBoard</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Sobre Nós</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Funcionalidades</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="CadastroReceita.html">Cadastro de Receitas</a></li>
+                        <li><a class="dropdown-item" href="cadastroAlimentos.html">Montagem de Dieta</a></li>
+                        <li><a class="dropdown-item" href="educacaoNutricional.html">Educação Nutricional</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Controle das Calorias</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="d-flex iconesDaNav">
+                <a class="nav-link position-relative" style="color: black; background-color: white; border-radius: 55px;" href="#" title="Notificações">
+                    <i class="bi bi-bell"></i>
+                    <span id="alertCount" class="badge rounded-pill bg-danger position-absolute top-0 start-100 translate-middle" style="display: none;">0</span>
+                </a>
+                <a class="nav-link" style="color: black; background-color: white; border-radius: 55px;" href="#" title="Perfil">
+                    <i class="bi bi-person"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
+</header>
+<body style="background-color: rgb(217 217 217);  overflow-x: hidden;">
+  <section class="montaDieta" style="overflow-x: hidden;">
+    <div class="row tituloSecao align-items-center">
+      <div class="col-auto">
+        <h3>Lista de Compras</h3>
+      </div>
+      <div class="col text-end">
+        <button type="button" class="btn btn-success" id="geraPDF" onclick="geraPDF()">Baixar Lista</button>
+      </div>
+    </div>
+    
+    <div id="containerListaDeCompras" class="containerListaDeCompras">
+      <h3>Aqui estão seus alimentos e quantidade em que devem ser comprados</h3>
+      
+      <div class="table-responsive">
+        <table class="table">
+          <thead class="cabecalhoTabela">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Nome do Alimentos</th>
+              <th scope="col">Quantidade em gramas</th>
+              <th scope="col">Calorias</th>
+            </tr>
+          </thead>
+          <tbody class="corpoDaLista">
+            
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>  
+  <div id="modalContainer"></div>
+  <footer class="text-center text-lg-start bg-light text-muted" style="margin-top: 150px;  overflow-x: hidden;">
+    <div class="container p-4">
+        <div class="row">
+            <div class="col-lg-6 col-md-12 mb-4">
+                <h5 class="text-uppercase">NutriSmart</h5>
+                <p>
+                    Sua plataforma de nutrição e bem-estar, ajudando você a alcançar seus objetivos de saúde de forma saudável e sustentável.
+                </p>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4">
+                <h5 class="text-uppercase">Links Úteis</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" style="text-decoration: none;" class="text-dark">Sobre Nós</a></li>
+                    <li><a href="#" style="text-decoration: none;" class="text-dark">Funcionalidades</a></li>
+                    <li><a href="#" style="text-decoration: none;" class="text-dark">Receitas Saudáveis</a></li>
+                    <li><a href="#" style="text-decoration: none;" class="text-dark">Contato</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4">
+                <h5 class="text-uppercase">Contato</h5>
+                <ul class="list-unstyled">
+                    <li>Email: contato@nutrismart.com</li>
+                    <li>Telefone: (xx) xxxxx-xxxx</li>
+                    <li>Endereço: Rua exemplo Numero Exemplo</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center p-3">
+        &copy; 2024 NutriSmart. Todos os direitos reservados.
+    </div>
+</footer>
+
+<div id="modalNotificacao"></div>
+</body>
+</html>
