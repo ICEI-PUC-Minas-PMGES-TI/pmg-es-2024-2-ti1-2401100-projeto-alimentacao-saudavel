@@ -7,6 +7,7 @@ let alt = document.querySelector("#altura");
 let calculoimc = document.querySelector("#imc");
 let proximo = document.querySelector("#prox");
 let sexo = document.querySelector("#sexo");
+document.getElementById('Calculo').addEventListener('click', calcularIMC);
 
 // Inicializando o objeto 'dados' com os valores iniciais
 let dados = {
@@ -40,39 +41,73 @@ function salvarDadosNoLocalStorage() {
     console.log("Dados salvos no Local Storage:", dados);
 }
 
+function limparCampos() {
+    objetivocli.value = "";
+    diabetico.value = "";
+    alergico.value = "";
+    alimento.value = "";
+    peso.value = "";
+    alt.value = "";
+    sexo.value = "";
+    calculoimc.value = "";
+    
+    // Limpar a lista de alimentos selecionados
+    const listaAlimentos = document.getElementById("listaAlimentosSelecionados");
+    listaAlimentos.innerHTML = ""; // Limpa todos os itens da lista
 
-function carregarDadosDoLocalStorage() {
-    // Verificando se existem dados no Local Storage
-    const dadosSalvos = localStorage.getItem("dadosUsuario");
-    if (dadosSalvos) {
-        const dadosRecuperados = JSON.parse(dadosSalvos);
-
-        // Atualizando os campos do formulário com os dados recuperados
-        objetivocli.value = dadosRecuperados.objetivo || "";
-        diabetico.value = dadosRecuperados.diabete || "";
-        alergico.value = dadosRecuperados.alergia || "";
-        peso.value = dadosRecuperados.peso || "";
-        alt.value = dadosRecuperados.altura || "";
-        sexo.value = dadosRecuperados.sexo || "";
-
-        // Se houver alimentos alérgicos, exiba-os em uma lista
-        if (dadosRecuperados.alimento && Array.isArray(dadosRecuperados.alimento)) {
-            const listaAlimentos = document.getElementById("listaAlimentosSelecionados");
-            listaAlimentos.innerHTML = ""; // Limpa a lista antes de adicionar
-            dadosRecuperados.alimento.forEach(alimento => {
-                const item = document.createElement("li");
-                item.textContent = alimento;
-                listaAlimentos.appendChild(item);
-            });
-        }
-
-        console.log("Dados carregados do Local Storage:", dadosRecuperados);
-    } else {
-        console.log("Nenhum dado encontrado no Local Storage.");
-    }
+    console.log("Campos limpos");
 }
 
+function calcularIMC() {
+    // Obtém os valores dos campos de peso e altura
+    var pesoValue = parseFloat(peso.value);
+    var alturaValue = parseFloat(alt.value);
 
+    // Verifica se os valores são válidos
+    if (isNaN(pesoValue) || isNaN(alturaValue) || pesoValue <= 0 || alturaValue <= 0) {
+        alert("Por favor, insira valores válidos para peso e altura.");
+        return;
+    }
+
+    // Verifique se a altura está em metros e o peso está em kg.
+    // Caso necessário, converta a altura para metros.
+    if (alturaValue > 3) { // caso o valor da altura seja muito alto (provavelmente em centímetros)
+        alturaValue = alturaValue / 100; // converte para metros
+    }
+
+    // Calcula o IMC
+    var imc = pesoValue / (alturaValue * alturaValue);
+
+    // Exibe o resultado no campo de IMC com duas casas decimais
+
+    // Classificação do IMC
+    var classificacao = "";
+    if (imc < 18.5) {
+        classificacao = "Abaixo do peso";
+    } else if (imc >= 18.5 && imc < 24.9) {
+        classificacao = "Peso normal";
+    } else if (imc >= 25 && imc < 29.9) {
+        classificacao = "Sobrepeso";
+    } else if (imc >= 30 && imc < 34.9) {
+        classificacao = "Obesidade grau 1";
+    } else if (imc >= 35 && imc < 39.9) {
+        classificacao = "Obesidade grau 2";
+    } else {
+        classificacao = "Obesidade grau 3 (mórbida)";
+    }
+
+    // Exibe a classificação no console ou em algum campo HTML
+    alert(`Seu IMC é ${imc.toFixed(2)}. Classificação: ${classificacao}`);
+    calculoimc.value = `Seu IMC é ${imc.toFixed(2)}. Classificação: ${classificacao}`;
+
+
+}
+document.getElementById('Calculo').addEventListener('click', calcularIMC);
+
+
+window.addEventListener("beforeunload", function () {
+    limparCampos();
+});
 
 // Exemplo de uso ao clicar no botão "Próximo"
 proximo.addEventListener("click", function (e) {
@@ -90,6 +125,46 @@ proximo.addEventListener("click", function (e) {
         salvarDadosNoLocalStorage();
     }
 });
+
+function salvarDadosNoLocalStorage() {
+    // Obter os alimentos selecionados
+    const alimentosSelecionados = Array.from(document.querySelectorAll("#listaAlimentosSelecionados li"))
+        .map(item => item.textContent);
+
+    // Atualizando os valores no objeto 'dados'
+    dados.objetivo = objetivocli.value;
+    dados.diabete = diabetico.value;
+    dados.alergia = alergico.value;
+    dados.peso = peso.value;
+    dados.altura = removerPontuacao(alt.value);
+    dados.sexo = sexo.value;
+    dados.alimento = alimentosSelecionados; // Armazena como array
+
+    // Salvando o objeto no Local Storage
+    localStorage.setItem("dadosUsuario", JSON.stringify(dados));
+
+    alert("Dados salvos com sucesso!");
+    console.log("Dados salvos no Local Storage:", dados);
+}
+
+
+
+proximo.addEventListener("click", function (e) {
+    e.preventDefault(); // Previne o comportamento padrão do botão
+    if (
+        peso.value === "" ||
+        alt.value === "" ||
+        objetivocli.value === "" ||
+        diabetico.value === "" ||
+        alergico.value === "" ||
+        sexo.value === ""
+    ) {
+        alert("Preencha todos os campos!");
+    } else {
+        salvarDadosNoLocalStorage(); // Salva os dados
+    }
+});
+
 
 // Carregar dados automaticamente ao abrir a página
 document.addEventListener("DOMContentLoaded", carregarDadosDoLocalStorage);
@@ -155,6 +230,7 @@ function atualizarTabela(alimentos) {
     });
 }
 // Função para salvar os alimentos selecionados e exibi-los
+// Função para salvar os alimentos selecionados e exibi-los com "X" para exclusão
 function salvarAlimentosSelecionados() {
     const alimentosSelecionados = []; // Lista para armazenar os alimentos selecionados
 
@@ -179,10 +255,28 @@ function salvarAlimentosSelecionados() {
         if (!itemExistente) {
             const item = document.createElement("li");
             item.textContent = alimento;
+
+            // Criar o "X" para excluir o item
+            const excluirBtn = document.createElement("span");
+            excluirBtn.textContent = " X";
+            excluirBtn.style.color = "red";
+            excluirBtn.style.cursor = "pointer";
+            excluirBtn.style.marginLeft = "10px";
+
+            // Adicionar o evento de clique para excluir o alimento
+            excluirBtn.addEventListener("click", () => {
+                listaAlimentos.removeChild(item); // Remove o item da lista
+            });
+
+            // Adicionar o "X" ao item
+            item.appendChild(excluirBtn);
+
+            // Adicionar o item à lista
             listaAlimentos.appendChild(item);
         }
     });
 }
+
 
 // Evento para monitorar mudanças nos checkboxes
 document.querySelectorAll("#modalDeBuscaLanche input[type='checkbox']").forEach(checkbox => {
