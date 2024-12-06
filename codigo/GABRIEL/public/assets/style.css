@@ -1,0 +1,136 @@
+/* Estilos gerais */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #e9f5e9;
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+
+/* Seção de alimentos */
+.alimentos-section {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.alimentos-section h2 {
+    font-size: 2em;
+    color: black;
+}
+
+/* Contêiner dos alimentos */
+.alimentos-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+/* Cartão de cada alimento */
+.alimento-card {
+    background-color: #fff;
+    padding: 20px;
+    width: 220px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}
+
+.alimento-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.alimento-card h3 {
+    font-size: 1.5em;
+    color: black;
+}
+
+.alimento-card p {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Nota de avaliação com estrelas */
+.nota {
+    font-size: 1.5em;
+    color: black;
+    font-weight: bold;
+}
+
+.nota span {
+    margin-left: 5px;
+    color: green; /* Cor das estrelas */
+}
+
+/* Estilo da seção de detalhes */
+.detalhes-section {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 700px;
+    margin: 50px auto;
+    position: relative;
+}
+
+/* Nome do alimento e imagem */
+.header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#alimento-nome {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0;
+}
+
+
+
+/* Blocos de informações */
+.info-bloco {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.info-bloco h3 {
+    font-size: 1.2em;
+    color: #4CAF50;
+    margin-bottom: 8px;
+}
+
+.info-bloco p {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Botão voltar */
+.voltar {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.voltar:hover {
+    background-color: #45a049;
+}
