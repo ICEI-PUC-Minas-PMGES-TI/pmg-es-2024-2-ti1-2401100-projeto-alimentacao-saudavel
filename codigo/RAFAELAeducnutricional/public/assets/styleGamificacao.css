@@ -4,15 +4,6 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #eafbf0; 
-}
-
 .container {
   display: flex;
   background-color: #ffffff;
@@ -21,6 +12,8 @@ body {
   width: 90%;
   max-width: 1200px;
   overflow: hidden;
+  margin-top: 1%;
+  background-color: whitesmoke;
 }
 
 .sidebar {

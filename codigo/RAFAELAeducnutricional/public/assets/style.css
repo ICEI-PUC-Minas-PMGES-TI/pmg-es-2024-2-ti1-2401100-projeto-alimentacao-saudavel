@@ -91,3 +91,23 @@ nav {
     margin-right: 5%;
     margin-top: 5%;
 }
+
+/* Seção Formulário */
+.container.mt-4 {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 1200px;
+    overflow: hidden;
+    margin-top: 3%;
+    background-color: whitesmoke;
+}
+
+#titulo-form {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 2%;
+    margin-top: 2%;
+}

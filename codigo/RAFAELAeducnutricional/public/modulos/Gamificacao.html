@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NutriPoints - Alimentação Saudável</title>
+  <link rel="stylesheet" href="../assets/styleGamificacao.css">
+  <link rel="stylesheet" href="../assets/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Moderustic:wght@300..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  
+</head>
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a href="index.html" style="text-decoration: none; color: black;">
+                <!-- Inserir logo -->
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">DashBoard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Sobre Nós</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Funcionalidades</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="CadastroReceita.html">Cadastro de Receitas</a></li>
+                            <li><a class="dropdown-item" href="Formulario.html">Formulário Individual</a></li>
+                            <li><a class="dropdown-item" href="cadastroAlimentos.html">Montagem de Dieta</a></li>
+                            <li><a class="dropdown-item" href="educacaoNutricional.html">Educação Nutricional</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Controle das Calorias</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="d-flex iconesDaNav">
+                    <a class="nav-link position-relative" style="color: black; background-color: white; border-radius: 55px;" href="#" title="Notificações">
+                        <i class="bi bi-bell"></i>
+                        <span id="alertCount" class="badge rounded-pill bg-danger position-absolute top-0 start-100 translate-middle" style="display: none;">0</span>
+                    </a>
+                    <a class="nav-link" style="color: black; background-color: white; border-radius: 55px;" href="#" title="Perfil">
+                        <i class="bi bi-person"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+  <div class="container">
+    <div class="sidebar">
+      <div class="profile">
+        <img src="https://via.placeholder.com/100" alt="Foto do usuário">
+        <h2>Usuário</h2>
+        <p>emaildousuario@email.com</p>
+        <p>Registrado: 24 Novembro 2024</p>
+      </div>
+    </div>
+
+    <div class="main-content">
+      <section class="balance">
+        <h1>Pontos de Saúde</h1>
+        <div class="balance-display">
+          <h2 id="coin-balance">0</h2>
+          <p>Pontos</p>
+        </div>
+      </section>
+
+      <section class="challenges">
+        <h1>Desafios Diários</h1>
+        <ul id="challenge-list">
+        </ul>
+      </section>
+
+      <section class="rewards">
+        <h1>Recompensas</h1>
+        <div class="rewards-list">
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <div id="popup" class="popup hidden">
+    <div class="popup-content">
+      <img id="popup-image" src="" alt="Prêmio" />
+      <p id="popup-message"></p>
+      <button onclick="closePopup()">Fechar</button>
+    </div>
+  </div>
+
+  <script src="../assets/scriptGamificacao.js"></script>
+  <script src="../assets/script.js"></script>
+</body>
+</html>
