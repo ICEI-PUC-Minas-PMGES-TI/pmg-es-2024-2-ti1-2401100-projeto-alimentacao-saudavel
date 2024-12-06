@@ -1,0 +1,188 @@
+/* Geral */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #009A50;
+    color: white;
+    padding: 10px 20px;
+  }
+  
+  .header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .header nav ul li a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .auth-buttons button {
+    margin-left: 10px;
+    padding: 5px 10px;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background: url('hero-background.jpg') no-repeat center center/cover;
+    text-align: center;
+    color: black;
+    padding: 50px 20px;
+  }
+  
+  .cta-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #2B7A0B;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    font-weight: bold; /* Dá mais destaque ao texto */
+    transition: all 0.3s ease-in-out; /* Suaviza as transições */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra inicial */
+}
+
+.cta-button:hover {
+    background-color: #21650A; /* Cor mais escura no hover */
+    color: #E0FFE6; /* Texto com contraste suave */
+    transform: scale(1.05); /* Aumenta levemente o tamanho */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Sombra mais intensa */
+}
+
+.cta-button:active {
+    transform: scale(0.98); /* Leve retração ao clicar */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Reduz a sombra ao clicar */
+}
+
+  
+  /* Sobre Nós */
+  .about {
+    background-color: #e3e9e6;
+    text-align: center;
+    padding: 50px 20px;
+  }
+
+  .about-text
+  {
+    color: black;
+  }
+  
+  /* Funcionalidades */
+  .features {
+    color: black;
+    padding: 50px 20px;
+  }
+  
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .feature-card {
+    background-color: #009A50;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out; /* Suaviza as mudanças */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra inicial */
+}
+
+.feature-card:hover {
+    background-color: #007A40; /* Cor um pouco mais escura */
+    color: #E0FFE6; /* Cor de texto levemente contrastante */
+    transform: scale(1.05); /* Aumenta o tamanho em 5% */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Sombra mais pronunciada */
+}
+
+.feature-card:active {
+    transform: scale(0.98); /* Leve retração ao clicar */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Reduz a sombra ao clicar */
+}
+
+  
+  /* Rodapé */
+  .footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #009A50;
+    color: black;
+  }
+
+/* Sessões */
+.container-img {
+    display: flex;
+    justify-content: center;
+    background-color: #009A50;
+}
+
+.funcionalidades {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 3%;
+}
+
+.tit-about {
+    margin-bottom: 2%;
+    color: #2B7A0B;
+    font-weight: bolder;
+}
+
+.img-home-2 {
+    width: 30%;
+}
+
+/* Estilizando a seção */
+.hero {
+    position: relative; /* Permite posicionar o conteúdo internamente */
+    width: 100%;
+    height: 400px; /* Altura da seção, ajuste conforme necessário */
+    background-image: url('../assets/img/capa.png'); /* Caminho para sua imagem */
+    background-size: cover; /* Garante que a imagem preencha a área */
+    background-position: center; /* Centraliza a imagem */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white; /* Texto em branco para contraste */
+  }
+  
+  /* Conteúdo centralizado */
+  .hero-content {
+    position: relative; /* Para aplicar o espaçamento */
+    z-index: 2; /* Garante que o conteúdo fique acima do fundo */
+  }
+  
+  /* Botão */
+  .cta-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #2B7A0B; /* Cor do botão */
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+  }
+  
+  /* Efeito de sombra no texto */
+  .hero h1 {
+    font-size: 2.5rem; /* Ajuste do tamanho da fonte */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra para melhor visibilidade */
+  }
+  

@@ -145,7 +145,7 @@ function updateAlertCount() {
 
 // Funções relacionadas ao YouTube
 async function fetchYouTubeVideos() {
-    const apiKey = 'AIzaSyAi7yO08PVstgYrRFgUyL4tghvOT-X9sOI';
+    const apiKey = 'AIzaSyD97-HCS-kZ65FpUbB8JC8FvRbXSKSg9IY';
     const searchQuery = 'alimentação saudável';
     const maxResults = 10;
 

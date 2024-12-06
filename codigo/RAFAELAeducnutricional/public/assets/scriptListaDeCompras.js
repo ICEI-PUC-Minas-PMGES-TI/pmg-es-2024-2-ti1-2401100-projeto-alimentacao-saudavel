@@ -96,9 +96,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Função para preencher a tabela com os alimentos
     function preencherTabela() {
-
-        alert("Abra o console para ver o JSON dos alimentos que estão preenchendo a lista de compras");
-
         console.log(jsonDosAlimentos);
 
         const corpoDaLista = document.querySelector('.corpoDaLista'); // Referência ao corpo da tabela

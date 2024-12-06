@@ -88,7 +88,9 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("confirmDeleteBtn").addEventListener("click", () => {
         if (recipeIndexToDelete !== null) {
             const recipes = JSON.parse(localStorage.getItem("recipes")) || [];
+            console.log("Receitas antes de excluir:", recipes);
             recipes.splice(recipeIndexToDelete, 1);
+            console.log("Receitas depois de excluir:", recipes);
             localStorage.setItem("recipes", JSON.stringify(recipes));
             loadRecipes();
             showNotification("Receita excluída com sucesso!");
@@ -96,6 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         deleteConfirmationModal.classList.add("hidden");
     });
+    
 
     document.getElementById("cancelDeleteBtn").addEventListener("click", () => {
         deleteConfirmationModal.classList.add("hidden");

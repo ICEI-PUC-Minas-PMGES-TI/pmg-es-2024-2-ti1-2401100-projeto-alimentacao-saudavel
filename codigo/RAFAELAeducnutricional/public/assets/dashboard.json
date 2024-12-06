@@ -1,0 +1,176 @@
+{
+    "cards": [
+        {
+            "calories": 100,
+            "consumed": 100,
+            "remaining": 0
+        }
+    ],
+    "graphs": [
+        {
+            "nutrients": [
+                { "label": "Proteína", "value": 81, "color": "#FF6384" },
+                { "label": "Gordura", "value": 22, "color": "#36A2EB" },
+                { "label": "Carboidrato", "value": 62, "color": "#4BC0C0" }
+            ],
+            "calories": [1400, 1500, 1600, 1700, 1500, 1800, 1900]
+        }
+    ],
+    "meals": [
+        {
+            "name": "Café da Manhã",
+            "items": [
+                {
+                    "name": "2 fatias de pão integral",
+                    "calories": 220
+                },
+                {
+                    "name": "2 ovos mexidos",
+                    "calories": 150
+                },
+                {
+                    "name": "1 xícara de café sem açúcar",
+                    "calories": 0
+                }
+            ]
+        },
+        {
+            "name": "Almoço",
+            "items": [
+                {
+                    "name": "2 fatias de pão integral",
+                    "calories": 220
+                },
+                {
+                    "name": "2 ovos mexidos",
+                    "calories": 150
+                },
+                {
+                    "name": "1 xícara de café sem açúcar",
+                    "calories": 0
+                }
+            ]
+        },
+        {
+            "name": "Lanche",
+            "items": [
+                {
+                    "name": "2 fatias de pão integral",
+                    "calories": 220
+                },
+                {
+                    "name": "2 ovos mexidos",
+                    "calories": 150
+                },
+                {
+                    "name": "1 xícara de café sem açúcar",
+                    "calories": 0
+                }
+            ]
+        },
+        {
+            "name": "Janta",
+            "items": [
+                {
+                    "name": "2 fatias de pão integral",
+                    "calories": 220
+                },
+                {
+                    "name": "2 ovos mexidos",
+                    "calories": 150
+                },
+                {
+                    "name": "1 xícara de café sem açúcar",
+                    "calories": 0
+                }
+            ]
+        }
+    ],
+    "current_diet": [
+        {
+            "name": "Café da Manhã",
+            "items": [
+                {
+                    "name": "2 fatias de pão integral",
+                    "calories": 220
+                },
+                {
+                    "name": "2 ovos mexidos",
+                    "calories": 150
+                },
+                {
+                    "name": "1 xícara de café sem açúcar",
+                    "calories": 0
+                }
+            ]
+        },
+        {
+            "name": "Almoço",
+            "items": [
+                {
+                    "name": "2 fatias de pão integral",
+                    "calories": 220
+                },
+                {
+                    "name": "2 ovos mexidos",
+                    "calories": 150
+                },
+                {
+                    "name": "1 xícara de café sem açúcar",
+                    "calories": 0
+                }
+            ]
+        },
+        {
+            "name": "Lanche",
+            "items": [
+                {
+                    "name": "2 fatias de pão integral",
+                    "calories": 220
+                },
+                {
+                    "name": "2 ovos mexidos",
+                    "calories": 150
+                },
+                {
+                    "name": "1 xícara de café sem açúcar",
+                    "calories": 0
+                }
+            ]
+        },
+        {
+            "name": "Janta",
+            "items": [
+                {
+                    "name": "2 fatias de pão integral",
+                    "calories": 220
+                },
+                {
+                    "name": "2 ovos mexidos",
+                    "calories": 150
+                },
+                {
+                    "name": "1 xícara de café sem açúcar",
+                    "calories": 0
+                }
+            ]
+        }
+    ],
+    "recipes": [
+        {
+            "name": "Arroz",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "rating": 4.5
+        },
+        {
+            "name": "Frango",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "rating": 4.5
+        },
+        {
+            "name": "Ovo",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "rating": 4.5
+        }
+    ]
+}

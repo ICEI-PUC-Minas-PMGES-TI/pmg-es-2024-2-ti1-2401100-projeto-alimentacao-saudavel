@@ -1,12 +1,3 @@
-/* Estilos gerais */
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #e9f5e9;
-    color: black;
-    margin: 0;
-    padding: 0;
-}
-
 /* Seção de alimentos */
 .alimentos-section {
     text-align: center;
@@ -36,7 +27,7 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: left;
     transition: transform 0.2s, box-shadow 0.2s;
-    cursor: pointer;
+    cursor: unset;
     text-decoration: none;
     color: inherit;
 }

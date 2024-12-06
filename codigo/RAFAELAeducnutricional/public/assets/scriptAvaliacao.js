@@ -1,9 +1,9 @@
 const alimentos = [
-    { nome: "Arroz", descricao: "Um alimento básico em muitas culturas.", nota: 4.5 },
-    { nome: "Frango", descricao: "Uma excelente fonte de proteína.", nota: 4.0 },
-    { nome: "Ovo", descricao: "Rico em proteínas e nutrientes.", nota: 4.5 },
-    { nome: "Feijão", descricao: "Fonte de fibras e proteínas.", nota: 4.2 },
-    { nome: "Brócolis", descricao: "Uma verdura rica em vitaminas.", nota: 4.7 },
+    { nome: "Arroz", descricao: "Um alimento básico em muitas culturas.", nota: 4.8 },
+    { nome: "Frango", descricao: "Uma excelente fonte de proteína.", nota: 4.6 },
+    { nome: "Ovo", descricao: "Rico em proteínas e nutrientes.", nota: 4.6 },
+    { nome: "Feijão", descricao: "Fonte de fibras e proteínas.", nota: 4.3 },
+    { nome: "Brócolis", descricao: "Uma verdura rica em vitaminas.", nota: 4.1 },
 ];
 
 const container = document.querySelector('.alimentos-container');
