@@ -105,7 +105,7 @@ function loadModalContent() {
     fetch('templateModal.html')
         .then(response => response.text())
         .then(data => {
-            document.getElementById('modalContainer').innerHTML = data;
+            document.getElementById('modalNotificacao').innerHTML = data;
             loadAlerts();
             setupModal();
         })
