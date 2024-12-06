@@ -13,7 +13,7 @@
     <title>NutriSmart</title>
 </head>
 <header>
-  <nav class="navbar navbar-expand-lg navbar-light" style=" overflow-x: hidden;">
+  <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container-fluid">
         <a href="index.html" style="text-decoration: none; color: black;">
           <svg width="100" height="50" viewBox="0 0 650 650" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -21,37 +21,36 @@
             <path d="M360.202 165.818L360.5 281L300.633 362.5L228.632 258.077H227.247V384H174.513V165.818H219.896L305.763 291.528H307.574V165.818H360.202Z" fill="white"/>
             </svg>
         </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">DashBoard</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Sobre Nós</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Funcionalidades
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Receitas Saudáveis</a></li>
-              <li><a class="dropdown-item" href="#">Montagem de Dieta</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Controle das Calorias</a></li>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">DashBoard</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Sobre Nós</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Funcionalidades</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="CadastroReceita.html">Cadastro de Receitas</a></li>
+                        <li><a class="dropdown-item" href="cadastroAlimentos.html">Montagem de Dieta</a></li>
+                        <li><a class="dropdown-item" href="educacaoNutricional.html">Educação Nutricional</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Controle das Calorias</a></li>
+                    </ul>
+                </li>
             </ul>
-          </li>
-
-        </ul>
-        <div class="d-flex iconesDaNav">
-          <a class="nav-link" style="color: black;background-color: white;border-radius: 55px;" href="#" title="Icon 1"><i class="bi bi-bell"></i></a>
-          <a class="nav-link" style="color: black;background-color: white;border-radius: 55px;" href="#" title="Icon 2"><i class="bi bi-person"></i></a>
+            <div class="d-flex iconesDaNav">
+                <a class="nav-link position-relative" style="color: black; background-color: white; border-radius: 55px;" href="#" title="Notificações">
+                    <i class="bi bi-bell"></i>
+                    <span id="alertCount" class="badge rounded-pill bg-danger position-absolute top-0 start-100 translate-middle" style="display: none;">0</span>
+                </a>
+                <a class="nav-link" style="color: black; background-color: white; border-radius: 55px;" href="#" title="Perfil">
+                    <i class="bi bi-person"></i>
+                </a>
+            </div>
         </div>
-      </div>
     </div>
-  </nav>
+</nav>
 </header>
 <body style="background-color: rgb(217 217 217);  overflow-x: hidden;">
   <section class="montaDieta" style="overflow-x: hidden;">
