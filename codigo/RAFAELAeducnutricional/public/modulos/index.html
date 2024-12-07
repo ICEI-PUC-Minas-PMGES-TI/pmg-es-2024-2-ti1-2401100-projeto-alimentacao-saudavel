@@ -19,7 +19,7 @@
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
             <a href="index.html" style="text-decoration: none; color: black;">
-                <!-- Inserir logo -->
+                <img class="logo" src="../assets/img/logo.png" alt="Imagem">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -34,11 +34,10 @@
                             <li><a class="dropdown-item" href="CadastroReceita.html">Cadastro de Receitas</a></li>
                             <li><a class="dropdown-item" href="Formulario.html">Formulário Individual</a></li>
                             <li><a class="dropdown-item" href="cadastroAlimentos.html">Montagem de Dieta</a></li>
-                            <li><a class="dropdown-item" href="listaDeCompras.html">Lista de Compras</a></li>
+                            <li><a class="dropdown-item" href="listaDeAlimentos.html">Lista de Alimentos</a></li>
                             <li><a class="dropdown-item" href="Gamificacao.html">Gamificação</a></li>
-                            <li><a class="dropdown-item" href="educacaoNutricional.html">Educação Nutricional</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#">Controle das Calorias</a></li>
+                            <li><a class="dropdown-item" href="educacaoNutricional.html">Educação Nutricional</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -47,16 +46,13 @@
                         <i class="bi bi-bell"></i>
                         <span id="alertCount" class="badge rounded-pill bg-danger position-absolute top-0 start-100 translate-middle" style="display: none;">0</span>
                     </a>
-                    <a class="nav-link" style="color: black; background-color: white; border-radius: 55px;" href="#" title="Perfil">
-                        <i class="bi bi-person"></i>
-                    </a>
                 </div>
             </div>
         </div>
     </nav>
 </header>
 
-  <!-- Hero Section -->
+  <!-- Capa -->
   <section id="home" class="hero">
     <div class="hero-content">
       <h1>Veja como montar e organizar sua dieta!</h1>
@@ -64,50 +60,68 @@
     </div>
   </section>
   
-  <!-- Sobre Nós -->
+  <!-- Funcionalidades -->
   <section id="sobre-nos" class="about">
     <div class="about-text">
         <div class="texthome">
-            <h2 class="tit-about">Crie, modifique e aprenda sobre sua Dieta de qualquer lugar!</h2>
-            <p class="tit-about">Nosso objetivo é facilitar seus passos em direção a uma alimentação saudável...</p>
+            <h2 class="tit-about">Descubra ferramentas para transformar sua rotina alimentar!</h2>
+            <p class="tit-about">Escolha entre nossas funcionalidades exclusivas para criar, organizar e aprender sobre uma dieta saudável, feita sob medida para você.</p>
         </div>
         <div class="funcionalidades">
             <div class="features-grid">
-                <button class="feature-card" onclick="window.location.href='CadastroReceita.html'">Cadastro de Receitas</button>
-                <button class="feature-card" onclick="window.location.href='Formulario.html'">Formulário Individual</button>
-                <button class="feature-card" onclick="window.location.href='cadastroAlimentos.html'">Montagem de Dieta</button>
-                <button class="feature-card" onclick="window.location.href='listaDeCompras.html'">Lista de Compras</button>
-                <button class="feature-card" onclick="window.location.href='educacaoNutricional.html'">Educação Nutricional</button>
-                <button class="feature-card" onclick="window.location.href='Gamificacao.html'">Ganhe pontos e receba recompensas</button>
+                <button class="feature-card" onclick="window.location.href='CadastroReceita.html'">
+                    <i class="bi bi-journal-plus"></i> Cadastro de Receitas
+                </button>
+                <button class="feature-card" onclick="window.location.href='Formulario.html'">
+                    <i class="bi bi-card-text"></i> Formulário Individual
+                </button>
+                <button class="feature-card" onclick="window.location.href='cadastroAlimentos.html'">
+                    <i class="bi bi-list-task"></i> Montagem de Dieta
+                </button>
+                <button class="feature-card" onclick="window.location.href='listaDeAlimentos.html'">
+                    <i class="bi bi-basket"></i> Lista de Alimentos
+                </button>
+                <button class="feature-card" onclick="window.location.href='educacaoNutricional.html'">
+                    <i class="bi bi-lightbulb"></i> Educação Nutricional
+                </button>
+                <button class="feature-card" onclick="window.location.href='Gamificacao.html'">
+                    <i class="bi bi-trophy"></i> Ganhe Pontos e Receba Recompensas
+                </button>
             </div>
-            
         </div>
-          
-        <!-- <div class="imgshome">
-            <img class="img-home-2" src="../assets/img/imagem.png" alt="Imagem">
-            <img class="img-home-2" src="../assets/img/img.png" alt="Imagem">
-            <img class="img-home-2" src="../assets/img/img2.png" alt="Imagem">
-        </div> -->
     </div>
-  </section>
+</section>
 
+  <!-- Seção com Vídeo de Fundo -->
+<section id="video-section" class="video-section">
+    <iframe 
+        class="background-video" 
+        src="https://www.youtube.com/embed/pMj7SsDVO18?autoplay=1&mute=1&loop=1&playlist=pMj7SsDVO18&controls=0&showinfo=0&modestbranding=1" 
+        frameborder="0" 
+        allow="autoplay; fullscreen" 
+        allowfullscreen>
+    </iframe>
+    <div class="video-content">
+        <h1>Descubra o prazer de uma alimentação saudável!</h1>
+        <p>Explore receitas, monte dietas e transforme sua saúde com o NutriSmart.</p>
+        <a href="educacaoNutricional.html" class="cta-button">Saiba mais</a>
+    </div>
+</section>
+
+<!-- Quem Somos -->
   <section id="quemSomos">
     <div class="container-img">
         <img src="../assets/img/Group 2.png" alt="Imagem">
     </div>
   </section>
 
-  <!-- Rodapé -->
-  <footer class="text-center text-lg-start bg-light text-muted" style="margin-top: 20px;">
+  <footer class="text-center text-lg-start bg-light text-muted mt-5">
     <div class="container p-4">
         <div class="row">
             <div class="col-lg-6 col-md-12 mb-4">
                 <h5 class="text-uppercase">NutriSmart</h5>
-                <p>
-                    Sua plataforma de nutrição e bem-estar, ajudando você a alcançar seus objetivos de saúde de forma saudável e sustentável.
-                </p>
+                <p>Sua plataforma de nutrição e bem-estar, ajudando você a alcançar seus objetivos de saúde de forma saudável e sustentável.</p>
             </div>
-
             <div class="col-lg-3 col-md-6 mb-4">
                 <h5 class="text-uppercase">Contato</h5>
                 <ul class="list-unstyled">
@@ -117,11 +131,9 @@
             </div>
         </div>
     </div>
-
-    <div class="text-center p-3">
-        &copy; 2024 NutriSmart. Todos os direitos reservados.
-    </div>
+    <div class="text-center p-3">&copy; 2024 NutriSmart. Todos os direitos reservados.</div>
 </footer>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   <script src="../assets/scripts.js"></script>
   <script src="../assets/script.js"></script>

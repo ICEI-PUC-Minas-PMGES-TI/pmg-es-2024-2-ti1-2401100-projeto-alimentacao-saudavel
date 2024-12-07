@@ -2,6 +2,79 @@
     font-family: "Poppins", sans-serif;
 }
 
+.video-section {
+    position: relative;
+    height: 100vh; /* Define a altura da seção */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: white;
+    text-align: center;
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que o vídeo cubra a área */
+    z-index: -1; /* Coloca o vídeo no fundo */
+    pointer-events: none; /* Impede interação com o vídeo */
+}
+
+.video-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adiciona um filtro escuro */
+    z-index: 0; /* Camada do filtro */
+}
+
+.video-content {
+    position: relative;
+    z-index: 1; /* Coloca o texto acima do vídeo */
+    padding: 20px;
+}
+
+.cta-button {
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: inline-block;
+    font-size: 1.2em;
+    transition: background 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #218838;
+}
+
+i.bi{
+    margin-right: 2%;
+}
+
+.tit-about {
+    font-size: 2.0em;
+    text-align: center;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.tit-about + p {
+    font-size: 1.2em;
+    text-align: center;
+    color: #555;
+    margin-bottom: 20px;
+}
+
 /* Estilo para a navegação */
 nav {
     background-color: #009A50;
@@ -47,6 +120,11 @@ nav {
     background-color: #FFDF00;
     color: black;
     font-weight: bold;
+}
+
+.logo {
+    margin-left: 37%;
+    width: 85%;
 }
 
 /* Estilo para as seções */

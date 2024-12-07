@@ -29,7 +29,7 @@ body{
 }
 
 
-.containerListaDeCompras{
+.containerListaDealimentos{
     background-color: white;
     margin-top: 2%;
     padding: 2%;
@@ -79,7 +79,7 @@ th, td {
         margin-top: 1rem;
     }
 
-    .containerListaDeCompras {
+    .containerListaDealimentos {
         padding: 10px;
     }
 
@@ -105,7 +105,7 @@ th, td {
         font-size: 1.2rem;
     }
 
-    .containerListaDeCompras {
+    .containerListaDealimentos {
         padding: 5%;
     }
 

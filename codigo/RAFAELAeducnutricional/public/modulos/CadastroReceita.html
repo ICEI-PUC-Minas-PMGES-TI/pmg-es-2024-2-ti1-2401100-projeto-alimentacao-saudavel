@@ -11,8 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Moderustic:wght@300..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
 </head>
 
@@ -21,7 +21,7 @@
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container-fluid">
                 <a href="index.html" style="text-decoration: none; color: black;">
-                    <!-- Inserir logo -->
+                    <img class="logo" src="../assets/img/logo.png" alt="Imagem">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -36,7 +36,7 @@
                                 <li><a class="dropdown-item" href="CadastroReceita.html">Cadastro de Receitas</a></li>
                                 <li><a class="dropdown-item" href="Formulario.html">Formulário Individual</a></li>
                                 <li><a class="dropdown-item" href="cadastroAlimentos.html">Montagem de Dieta</a></li>
-                                <li><a class="dropdown-item" href="listaDeCompras.html">Lista de Compras</a></li>
+                                <li><a class="dropdown-item" href="listaDeAlimentos.html">Lista de Alimentos</a></li>
                                 <li><a class="dropdown-item" href="Gamificacao.html">Gamificação</a></li>
                                 <li><a class="dropdown-item" href="educacaoNutricional.html">Educação Nutricional</a></li>
                                 <li><hr class="dropdown-divider"></li>
@@ -48,9 +48,6 @@
                         <a class="nav-link position-relative" style="color: black; background-color: white; border-radius: 55px;" href="#" title="Notificações">
                             <i class="bi bi-bell"></i>
                             <span id="alertCount" class="badge rounded-pill bg-danger position-absolute top-0 start-100 translate-middle" style="display: none;">0</span>
-                        </a>
-                        <a class="nav-link" style="color: black; background-color: white; border-radius: 55px;" href="#" title="Perfil">
-                            <i class="bi bi-person"></i>
                         </a>
                     </div>
                 </div>
@@ -78,12 +75,6 @@
         <div id="noRecipesMessage" class="no-recipes">Você ainda não tem nenhuma receita pronta adicionada.</div>
         
         <div class="recipes-list" id="recipesList">
-        </div>
-        
-        <div id="deleteConfirmationModal" class="modal hidden">
-            <p>Tem certeza que quer excluir esta receita?</p>
-            <button id="confirmDeleteBtn" class="confirm-btn">Sim</button>
-            <button id="cancelDeleteBtn" class="cancel-btn">Não</button>
         </div>
 
         <div id="clearAllConfirmationModal" class="modal hidden">
@@ -120,8 +111,8 @@
         &copy; 2024 NutriSmart. Todos os direitos reservados.
     </div>
 </footer>
+    <script src="../assets/script.js"></script>
     <script src="../assets/scriptCadastroReceitas.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="../assets/script.js"></script>
 </body>
 </html>

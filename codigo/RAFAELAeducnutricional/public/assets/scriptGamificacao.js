@@ -64,7 +64,6 @@ const challenges = [
       const div = document.createElement("div");
       div.className = "reward-item";
       div.innerHTML = `
-        <img src="${reward.img}" alt="${reward.name}">
         <span>${reward.name} - ${reward.cost} pontos</span>
         <button 
           onclick="claimReward(${reward.id}, '${reward.name}', ${reward.cost}, '${reward.img}')" 

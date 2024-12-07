@@ -6,38 +6,19 @@
 
 .container {
   display: flex;
+  justify-content: center;
   background-color: #ffffff;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   width: 90%;
   max-width: 1200px;
   overflow: hidden;
-  margin-top: 1%;
+  margin-top: 3%;
   background-color: whitesmoke;
 }
 
-.sidebar {
-  width: 25%;
-  background-color: #4caf50; 
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-}
-
-.profile img {
-  border-radius: 50%;
-  margin-bottom: 10px;
-}
-
-.profile h2 {
-  font-size: 1.5rem;
-}
-
 .main-content {
-  width: 75%;
-  padding: 20px;
+  width: 65%;
 }
 
 h1 {

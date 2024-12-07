@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/styleListaDealimentos.css">
+    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="stylesheet" href="../assets/styleAvaliacao.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Moderustic:wght@300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <title>NutriSmart - Lista de Alimentos</title>
+    <style>
+      body {
+          background-color: #e7f5e9;
+      }
+      .titulo-pagina {
+          margin-top: 30px;
+          margin-bottom: 20px;
+          text-align: center;
+      }
+      .formulario-busca {
+          display: flex;
+          justify-content: center;
+          gap: 10px;
+          margin-bottom: 20px;
+      }
+      .formulario-busca input {
+          width: 300px;
+      }
+      table {
+          width: 100%;
+          margin-top: 20px;
+          border-collapse: collapse;
+      }
+      th, td {
+          border: 1px solid #ddd;
+          text-align: center;
+          padding: 8px;
+      }
+      th {
+          background-color: #009a50 !important;
+          color: white;
+      }
+      .btn-adicionar {
+          background-color: #28a745;
+          color: white;
+          border: none;
+      }
+      .btn-adicionar:hover {
+          background-color: #218838;
+      }
+      .tabela-selecionados {
+          margin-top: 40px;
+      }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a href="index.html" style="text-decoration: none; color: black;">
+                <img class="logo" src="../assets/img/logo.png" alt="Imagem">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" aria-current="page" href="dashboard.html">DashBoard</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Funcionalidades</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="CadastroReceita.html">Cadastro de Receitas</a></li>
+                            <li><a class="dropdown-item" href="Formulario.html">Formulário Individual</a></li>
+                            <li><a class="dropdown-item" href="cadastroAlimentos.html">Montagem de Dieta</a></li>
+                            <li><a class="dropdown-item" href="listaDeAlimentos.html">Lista de Alimentos</a></li>
+                            <li><a class="dropdown-item" href="Gamificacao.html">Gamificação</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="educacaoNutricional.html">Educação Nutricional</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="d-flex iconesDaNav">
+                    <a class="nav-link position-relative" style="color: black; background-color: white; border-radius: 55px;" href="#" title="Notificações">
+                        <i class="bi bi-bell"></i>
+                        <span id="alertCount" class="badge rounded-pill bg-danger position-absolute top-0 start-100 translate-middle" style="display: none;">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main class="container">
+    <h1 class="titulo-pagina">Lista de Alimentos</h1>
+
+    <!-- Formulário para busca -->
+    <div class="formulario-busca">
+        <input id="inputBusca" type="text" class="form-control" placeholder="Digite o nome do alimento">
+        <button class="btn btn-primary" onclick="teste('inputBusca')">Buscar</button>
+    </div>
+
+    <!-- Tabela de resultados -->
+    <div class="table-responsive">
+        <table id="tabelaAlimentos" class="table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Nome</th>
+                    <th>Quantidade</th>
+                    <th>Calorias</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Os resultados da busca aparecerão aqui -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Tabela de alimentos selecionados -->
+    <div class="tabela-selecionados">
+      <h3>Alimentos Selecionados</h3>
+      <div class="table-responsive">
+          <table id="tabelaSelecionados" class="table">
+              <thead>
+                  <tr>
+                      <th>#</th>
+                      <th>Nome</th>
+                      <th>Quantidade</th>
+                      <th>Calorias</th>
+                      <th>Ações</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <!-- Os alimentos selecionados aparecerão aqui -->
+              </tbody>
+          </table>
+      </div>
+  </div>
+
+    <!-- Botão para gerar PDF -->
+    <div class="text-end mt-3">
+        <button id="botaoGerarPDF" class="btn btn-success">Gerar PDF</button>
+    </div>
+</main>
+
+<footer class="text-center text-lg-start bg-light text-muted" style="margin-top: 20px;">
+  <div class="container p-4">
+      <div class="row">
+          <div class="col-lg-6 col-md-12 mb-4">
+              <h5 class="text-uppercase">NutriSmart</h5>
+              <p>
+                  Sua plataforma de nutrição e bem-estar, ajudando você a alcançar seus objetivos de saúde de forma saudável e sustentável.
+              </p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mb-4">
+              <h5 class="text-uppercase">Contato</h5>
+              <ul class="list-unstyled">
+                  <li>Email: contato@nutrismart.com</li>
+                  <li>Telefone: (31) 99958-4270</li>
+              </ul>
+          </div>
+      </div>
+  </div>
+
+  <div class="text-center p-3">
+      &copy; 2024 NutriSmart. Todos os direitos reservados.
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="../assets/script.js"></script>
+<script src="../assets/scriptListaDealimentos.js"></script>
+<script src="../assets/scriptAvaliacao.js"></script>
+<script>
+  let listaFinal = []; // Lista de alimentos selecionados para o PDF
+
+  function teste(inputId) {
+      const inputValue = document.getElementById(inputId).value.toLowerCase();
+      fetch('../assets/dados/Taco-4a-Edicao.xlsx')
+          .then(response => {
+              if (!response.ok) {
+                  throw new Error('Erro ao carregar o arquivo Excel');
+              }
+              return response.arrayBuffer();
+          })
+          .then(data => {
+              const workbook = XLSX.read(data, { type: 'array' });
+              const worksheet = workbook.Sheets[workbook.SheetNames[0]];
+              const jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
+
+              const alimentosEncontrados = buscarAlimentosPorNome(jsonData, inputValue);
+              atualizarTabela(alimentosEncontrados);
+          })
+          .catch(error => console.error('Erro ao carregar os dados:', error));
+  }
+
+  function buscarAlimentosPorNome(jsonData, nome) {
+      return jsonData.filter(linha => linha[1] && linha[1].toLowerCase().includes(nome));
+  }
+
+  function atualizarTabela(alimentos) {
+      const tabela = document.getElementById('tabelaAlimentos').querySelector('tbody');
+      tabela.innerHTML = '';
+
+      alimentos.forEach((alimento, index) => {
+          const novaLinha = document.createElement('tr');
+          novaLinha.innerHTML = `
+              <td>${index + 1}</td>
+              <td>${alimento[1] || 'Não especificado'}</td>
+              <td><input type="text" placeholder="Quantidade (g)" class="form-control"></td>
+              <td>${alimento[3] || '0 kcal'}</td>
+              <td>
+                  <button class="btn btn-adicionar" onclick="adicionarAlimento(${index}, this)">Adicionar</button>
+              </td>
+          `;
+          novaLinha.dataset.index = index;
+          novaLinha.dataset.nome = alimento[1] || 'Não especificado';
+          novaLinha.dataset.calorias = alimento[3] || '0 kcal';
+          tabela.appendChild(novaLinha);
+      });
+  }
+
+  function adicionarAlimento(index, button) {
+      const linha = button.closest('tr');
+      const nome = linha.dataset.nome;
+      const calorias = linha.dataset.calorias;
+      const quantidade = linha.querySelector('input').value;
+
+      if (!quantidade) {
+          alert('Por favor, insira uma quantidade antes de adicionar.');
+          return;
+      }
+
+      listaFinal.push({ nome, quantidade, calorias });
+      atualizarTabelaSelecionados();
+  }
+
+  function atualizarTabelaSelecionados() {
+      const tabelaSelecionados = document.getElementById('tabelaSelecionados').querySelector('tbody');
+      tabelaSelecionados.innerHTML = '';
+
+      listaFinal.forEach((item, index) => {
+          const novaLinha = document.createElement('tr');
+          novaLinha.innerHTML = `
+              <td>${index + 1}</td>
+              <td>${item.nome}</td>
+              <td>${item.quantidade} g</td>
+              <td>${item.calorias}</td>
+              <td>
+                  <button class="btn btn-danger" onclick="removerAlimento(${index})">Remover</button>
+              </td>
+          `;
+          tabelaSelecionados.appendChild(novaLinha);
+      });
+  }
+
+  function removerAlimento(index) {
+      listaFinal.splice(index, 1);
+      atualizarTabelaSelecionados();
+  }
+
+  function gerarPDF() {
+      const { jsPDF } = window.jspdf;
+      const doc = new jsPDF();
+
+      doc.setFont('Helvetica', 'normal');
+      doc.setFontSize(12);
+      let y = 10;
+
+      doc.text('Lista de Alimentos Selecionados', 10, y);
+      y += 10;
+
+      if (listaFinal.length === 0) {
+          doc.text('Nenhum alimento foi selecionado.', 10, y);
+      } else {
+          listaFinal.forEach((item, index) => {
+              doc.text(
+                  `${index + 1}. Nome: ${item.nome}, Quantidade: ${item.quantidade}, Calorias: ${item.calorias}`,
+                  10,
+                  y
+              );
+              y += 10;
+
+              if (y > 280) {
+                  doc.addPage();
+                  y = 10;
+              }
+          });
+      }
+
+      doc.save('Lista_de_Alimentos.pdf');
+  }
+
+  document.getElementById('botaoGerarPDF').addEventListener('click', gerarPDF);
+</script>
+</body>
+</html>

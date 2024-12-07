@@ -1,8 +1,8 @@
 function geraPDF(){
-    const content = document.querySelector("#containerListaDeCompras");
+    const content = document.querySelector("#containerListaDealimentos");
 
     const opcoes = {
-        filename:"ListaDeCompras.pdf"
+        filename:"ListaDealimentos.pdf"
     }
 
     html2pdf().set(opcoes).from(content).save();

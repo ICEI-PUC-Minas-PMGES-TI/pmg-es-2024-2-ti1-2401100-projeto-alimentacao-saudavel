@@ -183,22 +183,75 @@ button[type="submit"]:hover {
     text-align: center;
 }
 
-.modal, .notification {
+.modal {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 20px;
-    background-color: white;
+    background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
+    padding: 20px;
     z-index: 1000;
+    display: none; /* O modal começa oculto */
+    width: 300px; /* Largura fixa do modal */
+    max-width: 80%; /* Ajusta para telas menores */
+    text-align: center;
 }
 
-.modal.hidden, .notification.hidden {
+.modal.hidden {
     display: none;
 }
+
+.modal-content {
+    text-align: center;
+}
+
+.modal p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #333;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.modal .confirm-btn,
+.modal .cancel-btn {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.modal .confirm-btn {
+    background-color: #28a745;
+    color: white;
+}
+
+.modal .cancel-btn {
+    background-color: #dc3545;
+    color: white;
+}
+
+.modal .confirm-btn:hover {
+    background-color: #218838;
+}
+
+.modal .cancel-btn:hover {
+    background-color: #c82333;
+}
+
+.container.p-4 {
+    background-color: #f8f9fa;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.0);
+}
+
 
 .notification {
     background-color: #28a745;
