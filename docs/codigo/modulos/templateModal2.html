@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!--INICIO: Modal Das Dicas-->
+<div class="modal fade" id="myModal" tabindex="-1">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Dicas</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="container mt-5">
+            <ul class="list-group">
+                <li class="list-group-item">1. <strong>Estabeleça Metas Realistas:</strong> Defina objetivos alcançáveis e específicos, como perder uma certa quantidade de peso por mês.</li>
+                <li class="list-group-item">2. <strong>Alimente-se de Forma Equilibrada:</strong> Priorize uma dieta rica em frutas, verduras, grãos integrais e proteínas magras.</li>
+                <li class="list-group-item">3. <strong>Controle as Porções:</strong> Preste atenção ao tamanho das porções. Usar pratos menores pode ajudar a evitar excessos.</li>
+                <li class="list-group-item">4. <strong>Mantenha-se Hidratado:</strong> Beba bastante água ao longo do dia.</li>
+                <li class="list-group-item">5. <strong>Pratique Atividade Física Regularmente:</strong> Encontre uma atividade que você goste e mantenha-se ativo.</li>
+                <li class="list-group-item">6. <strong>Evite Dietas Restritivas:</strong> Opte por mudanças graduais e sustentáveis.</li>
+                <li class="list-group-item">7. <strong>Durma Bem:</strong> Tente dormir entre 7 a 9 horas por noite.</li>
+                <li class="list-group-item">8. <strong>Monitore seu Progresso:</strong> Registre suas refeições e atividades físicas.</li>
+                <li class="list-group-item">9. <strong>Evite Distratores Durante as Refeições:</strong> Foque na sua refeição sem distrações.</li>
+                <li class="list-group-item">10. <strong>Busque Apoio:</strong> Compartilhe seus objetivos com amigos ou familiares.</li>
+                <li class="list-group-item">11. <strong>Seja Paciente:</strong> A perda de peso saudável leva tempo.</li>
+                <li class="list-group-item">12. <strong>Consultas Profissionais:</strong> Considere consultar um nutricionista ou médico.</li>
+            </ul>
+        </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">OK</button>
+        </div>
+      </div>
+    </div>
+</div>
+  <!--FINAL: Modal Das Dicas-->
+
+<!--INICIO: Modal Das Buscas Café-->
+<div class="modal fade" id="modalDeBusca" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title">Resultados da Pesquisa</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <table class="table table-responsive">
+                  <thead>
+                      <tr>
+                          <th scope="col"></th>
+                          <th scope="col">#</th>
+                          <th scope="col">Alimento</th>
+                          <th scope="col">Quantidade (em gramas)</th>
+                          <th scope="col">Calorias (Valor padrão 100g)</th>
+                      </tr>
+                  </thead>
+                  <tbody id="tabelaAlimentos">
+                      <!-- Dados da tabela -->
+                  </tbody>
+              </table>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="salvarAlimentosSelecionados('alimentosInseridosCafe', 'modalDeBusca', 'cafe')">OK</button>
+          </div>
+      </div>
+  </div>
+</div>
+<!--FINAL: Modal Das Buscas Café-->
+
+
+<!--INICIO: Modal Das Buscas Almoço-->
+<div class="modal fade" id="modalDeBuscaAlmoco" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Resultados da Pesquisa</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+          <table class="table table-responsive">
+            <thead>
+                <tr>
+                    <th scope="col"></th>
+                    <th scope="col">#</th>
+                    <th scope="col">Alimento</th>
+                    <th scope="col">Quantidade (em gramas)</th>
+                    <th scope="col">Calorias (Valor padrão 100g)</th>
+                </tr>
+            </thead>
+            <tbody id="tabelaAlimentosAlmoco">
+              <!-- Dados da tabela -->
+            </tbody>
+        </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="salvarAlimentosSelecionados('alimentosInseridosAlmoco', 'modalDeBuscaAlmoco', 'almoco')">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--FINAL: Modal Das Buscas Almoço-->
+
+<!--INICIO: Modal Das Buscas Janta-->
+<div class="modal fade" id="modalDeBuscaJanta" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Resultados da Pesquisa</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+          <table class="table table-responsive">
+            <thead>
+                <tr>
+                    <th scope="col"></th>
+                    <th scope="col">#</th>
+                    <th scope="col">Alimento</th>
+                    <th scope="col">Quantidade (em gramas)</th>
+                    <th scope="col">Calorias (Valor padrão 100g)</th>
+                </tr>
+            </thead>
+            <tbody id="tabelaAlimentosJanta">
+              <!-- Dados da tabela -->
+            </tbody>
+        </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="salvarAlimentosSelecionados('alimentosInseridosJanta', 'modalDeBuscaJanta', 'janta')">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--FINAL: Modal Das Buscas Janta-->
+
+<!--INICIO: Modal Das Buscas Lanche-->
+<div class="modal fade" id="modalDeBuscaLanche" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Resultados da Pesquisa</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+          <table class="table table-responsive">
+            <thead>
+                <tr>
+                    <th scope="col"></th>
+                    <th scope="col">#</th>
+                    <th scope="col">Alimento</th>
+                    <th scope="col">Quantidade (em gramas)</th>
+                    <th scope="col">Calorias (Valor padrão 100g)</th>
+                </tr>
+            </thead>
+            <tbody id="tabelaAlimentosLanche">
+              <!-- Dados da tabela -->
+            </tbody>
+        </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="salvarAlimentosSelecionados('alimentosInseridosLanche', 'modalDeBuscaLanche', 'lanche')">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--FINAL: Modal Das Buscas Lanche-->
+
+  <!--INICIO: Modal De Alerta Para Inserir 1 Alimento-->
+  <div class="modal fade" id="inserirUmAlimento" tabindex="-1">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">ATENÇÃO!</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>É preciso inserir algum alimento!!</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">OK</button>
+        </div>
+      </div>
+    </div>
+</div>
+  <!--FINAL: Modal De Alerta Para Inserir 1 Alimento--->
+
+    <!--INICIO: Modal De Alerta Que Salvou A Dieta-->
+    <div class="modal fade" id="salvaDieta" tabindex="-1">
+      <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Dieta Salva!</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Sua dieta foi salva com sucesso!!</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="recarregarPagina()">OK</button>
+          </div>
+        </div>
+      </div>
+  </div>
+    <!--FINAL: Modal De Alerta Que Salvou A Dieta-->
+
+  
+</body>
+</html>

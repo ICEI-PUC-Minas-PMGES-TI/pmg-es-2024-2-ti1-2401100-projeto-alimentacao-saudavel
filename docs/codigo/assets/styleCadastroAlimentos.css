@@ -1,0 +1,72 @@
+nav{
+    background-color: #009A50;
+    font-family: moderustic;
+}
+
+.montaDieta{
+    font-family: moderustic;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
+}
+
+.navbar-nav {
+    margin: 0 auto; 
+    display: flex; 
+    justify-content: center; 
+    width: 100%; 
+}
+
+.iconesDaNav{
+    gap: 10px;
+    margin-right: 2%;
+}
+
+.inserirAlimentos{
+    background-color: white;
+    margin-top: 2%;
+    padding: 2%;
+    border-radius: 12px;
+}
+
+.container-refeicao{
+    margin-top: 3%;
+    width: 33%;
+}
+
+.alimentosInseridos{
+    margin-top: 3%;
+    background-color: #cdcdcd;
+    padding: 2%;
+    border-radius: 12px;
+
+    li{
+        margin-top: 10px;
+    }
+
+    p{
+        color: red;
+    }
+
+    
+}
+
+.CaloriasTotais{
+    background-color: #cdcdcd;
+    padding: 2%;
+    border-radius: 12px;
+
+    h3{
+        color: red;
+    }
+}
+
+.container-dieta{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5%;
+}
+
+.save{
+    margin-top: 1%;
+}

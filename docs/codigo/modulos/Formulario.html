@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../assets/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Moderustic:wght@300..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <title>Formulários</title>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <a href="index.html" style="text-decoration: none; color: black;">
+                    <img class="logo" src="../assets/img/logo.png" alt="Imagem">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" aria-current="page" href="dashboard.html">DashBoard</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Funcionalidades</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="CadastroReceita.html">Cadastro de Receitas</a></li>
+                                <li><a class="dropdown-item" href="Formulario.html">Formulário Individual</a></li>
+                                <li><a class="dropdown-item" href="cadastroAlimentos.html">Montagem de Dieta</a></li>
+                                <li><a class="dropdown-item" href="listaDeAlimentos.html">Lista de Alimentos</a></li>
+                                <li><a class="dropdown-item" href="Gamificacao.html">Gamificação</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="educacaoNutricional.html">Educação Nutricional</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="d-flex iconesDaNav">
+                        <a class="nav-link position-relative" style="color: black; background-color: white; border-radius: 55px;" href="#" title="Notificações">
+                            <i class="bi bi-bell"></i>
+                            <span id="alertCount" class="badge rounded-pill bg-danger position-absolute top-0 start-100 translate-middle" style="display: none;">0</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <main class="container mt-4">
+        <h2 id="titulo-form">Formulário Individual</h2>
+        <form class="objetivo">
+            <div class="mb-4">
+                <h4>Objetivo:</h4>
+                <label for="objetivo" class="form-label">Qual seu objetivo com a dieta:</label>
+                <select id="objetivo" class="form-select">
+                    <option value="" disabled selected>-</option>
+                    <option value="Perder peso">Perder peso</option>
+                    <option value="Ganhar massa muscular">Ganhar massa muscular</option>
+                    <option value="Vida saudável">Vida saudável</option>
+                </select>
+            </div>
+        </form>
+
+        <h4>Diabético/Alergico:</h4>
+        <form class="DiabAler">
+            <div class="mb-4 row">
+                <div class="col-md-4">
+                    <label for="diabetico" class="form-label">Você tem diabete:</label>
+                    <select id="diabetico" class="form-select">
+                        <option value="" disabled selected>-</option>
+                        <option value="Não">Não</option>
+                        <option value="Sim">Sim</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label for="alergico" class="form-label">Alérgico:</label>
+                    <select id="alergico" class="form-select">
+                        <option value="" disabled selected>-</option>
+                        <option value="Não">Não</option>
+                        <option value="Sim">Sim</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label for="alimAler" class="form-label">Busque pelo alimento que é alérgico:</label>
+                    <input type="text" id="alimento_alergico" class="form-control" placeholder="Ex: Amendoim">
+                    <button type="button" class="btn btn-outline-success mt-2" onclick="buscaAlimentos()" data-bs-toggle="modal" data-bs-target="#modalDeBuscaLanche">Buscar</button>
+                </div>
+            </div>
+        </form>
+
+        <h4>Informações Pessoais:</h4>
+        <form class="infopess">
+            <div class="mb-4 row">
+                <div class="col-md-4">
+                    <label for="peso" class="form-label">Informe seu peso:</label>
+                    <input type="number" id="peso" class="form-control" placeholder="Peso">
+                </div>
+                <div class="col-md-4">
+                    <label for="altura" class="form-label">Informe sua altura:</label>
+                    <input type="number" id="altura" class="form-control" placeholder="Altura">
+                </div>
+                <div class="col-md-4">
+                    <label for="sexo" class="form-label">Sexo:</label>
+                    <select id="sexo" class="form-select">
+                        <option value="" disabled selected>-</option>
+                        <option value="Masculino">Masculino</option>
+                        <option value="Feminino">Feminino</option>
+                    </select>
+                </div>
+            </div>
+        </form>
+
+        <form class="imc">
+            <div class="mb-4">
+                <label for="imc" class="form-label">Cálculo do IMC:</label>
+                <input type="text" id="imc" class="form-control" disabled>
+                <div class="d-flex justify-content-end mt-2">
+                    <button type="button" id="Calculo" class="btn btn-primary me-2">Calcular</button>
+                    <button type="button" id="prox" class="btn btn-success">Salvar</button>
+                </div>
+            </div>
+        </form>
+        <div class="listaDeAlimemtos">
+            <!-- Exibição dos alimentos selecionados -->
+            <h5>Alimentos Selecionados:</h5>
+                <ul id="listaAlimentosSelecionados">
+                <!-- Os alimentos selecionados serão exibidos aqui -->
+                </ul>
+        </div>
+    <!-- Modal de Busca Lanche -->
+    <div class="modal fade" id="modalDeBuscaLanche" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Resultados da Pesquisa</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-responsive">
+                        <thead>
+                            <tr>
+                                <th scope="col"></th>
+                                <th scope="col">#</th>
+                                <th scope="col">Alimento</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabelaAlimentosLanche">
+                            <!-- Dados da tabela -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="salvarAlimentosSelecionados('alimentosInseridosLanche', 'modalDeBuscaLanche', 'lanche')">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fim Modal de Busca Lanche -->
+</main>
+
+<footer class="text-center text-lg-start bg-light text-muted" style="margin-top: 20px;">
+    <div class="container p-4">
+        <div class="row">
+            <div class="col-lg-6 col-md-12 mb-4">
+                <h5 class="text-uppercase">NutriSmart</h5>
+                <p>
+                    Sua plataforma de nutrição e bem-estar, ajudando você a alcançar seus objetivos de saúde de forma saudável e sustentável.
+                </p>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4">
+                <h5 class="text-uppercase">Contato</h5>
+                <ul class="list-unstyled">
+                    <li>Email: contato@nutrismart.com</li>
+                    <li>Telefone: (31) 99958-4270</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center p-3">
+        &copy; 2024 NutriSmart. Todos os direitos reservados.
+    </div>
+</footer>
+
+    <script src="../assets/Formularios.js"></script>
+    <script src="../assets/script.js"></script>
+</body>
+</html>
